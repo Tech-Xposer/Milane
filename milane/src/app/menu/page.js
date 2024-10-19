@@ -4,10 +4,15 @@ import menu from "../data/menu.js";
 
 const Menu = () => {
   const [cart, setCart] = useState([]); // State to hold cart items
+  const [quantities, setQuantities] = useState({}); // State to hold quantities
 
   const handleAddToCart = (dish, quantity) => {
     const cartItem = { ...dish, quantity };
     setCart((prevCart) => [...prevCart, cartItem]);
+  };
+
+  const handleQuantityChange = (dishId, quantity) => {
+    setQuantities((prev) => ({ ...prev, [dishId]: quantity }));
   };
 
   return (
@@ -25,7 +30,7 @@ const Menu = () => {
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {item.items &&
                   item.items.map((dish, dishIndex) => {
-                    const [quantity, setQuantity] = useState(1); // State for quantity
+                    const quantity = quantities[dish.id] || 1; // Default quantity to 1 if not set
 
                     return (
                       <div
@@ -35,7 +40,7 @@ const Menu = () => {
                         <span className="block text-lg font-semibold text-[#F4BE39] font-forum">
                           {dish.name}
                         </span>
-                        <p className=" text-white mb-2 font-quicksand text-xl">
+                        <p className="text-white mb-2 font-quicksand text-xl">
                           {dish.description}
                         </p>
                         <p className="aa font-bold text-white font-quicksand text-xl">
@@ -47,7 +52,7 @@ const Menu = () => {
                             min="1"
                             value={quantity}
                             onChange={(e) =>
-                              setQuantity(Number(e.target.value))
+                              handleQuantityChange(dish.id, Number(e.target.value))
                             }
                             className="w-16 border-2 border-[#F4BE39] rounded-lg p-1 text-center"
                           />

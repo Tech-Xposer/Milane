@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head></head>
-      <body >
+      <body>
         <div className="top ">
-          <Preloader />
+          {/* <Preloader /> */}
           <TopBar />
           <Header />
 
