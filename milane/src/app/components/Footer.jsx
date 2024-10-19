@@ -18,7 +18,7 @@ const Footer = () => {
 							/>
 						</a>
 						<address className="body-4">
-							21, Boulevard Jean-Jaurès, 94260 FRESNES
+							21&rsquo; Boulevard Jean-Jaurès, 94260 FRESNES
 						</address>
 						<a
 							href="mailto:Khullarakshay723@gmial.com"

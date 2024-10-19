@@ -26,11 +26,11 @@ const Dishes = () => {
       <p className="section-subtitle label-2">Special Dish</p>
       <h2 className="headline-1 section-title">Mashli Masala</h2>
       <p className="section-text">
-        Découvrez notre plat phare, Poisson Grillé aux Herbes, une merveilleuse
+        Découvrez notre plat phare&rsquo; Poisson Grillé aux Herbes&rsquo; une merveilleuse
         alliance de saveurs maritimes et d'aromates méditerranéens. Chaque filet
-        de poisson est soigneusement sélectionné, puis grillé à la perfection et
+        de poisson est soigneusement sélectionné&rsquo; puis grillé à la perfection et
         assaisonné d'un mélange d'herbes fraîches et d'huile d'olive extra
-        vierge, offrant un équilibre subtil entre tendreté et croquant.
+        vierge&rsquo; offrant un équilibre subtil entre tendreté et croquant.
       </p>
       <div className="wrapper">
         <del className="del body-3">€11.50</del>

@@ -31,7 +31,7 @@ const Event = () => {
               </div>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">
-                  Nourriture, saveur
+                  Nourriture&rsquo; saveur
                 </p>
                 <h3 className="card-title title-2 text-center">
                   Une saveur si délicieuse que vous voudrez manger avec les

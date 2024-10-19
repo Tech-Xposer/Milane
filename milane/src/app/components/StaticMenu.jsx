@@ -38,7 +38,7 @@ const StaticMenu = () => {
                 </div>
 
                 <p className="card-text label-1">
-                  Morceaux de poulet aux herbes fraiches, grillés au tandoor.
+                  Morceaux de poulet aux herbes fraiches&rsquo; grillés au tandoor.
                 </p>
               </div>
             </div>

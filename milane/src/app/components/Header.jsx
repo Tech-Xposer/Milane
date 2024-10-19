@@ -117,7 +117,7 @@ const Header = () => {
           <div className="text-center">
             <p className="headline-1 navbar-title">Visitez-nous</p>
             <address className="body-4">
-              21, Boulevard Jean-Jaurès, 94260 FRESNES <br />
+              21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES <br />
               France
             </address>
             <p className="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>

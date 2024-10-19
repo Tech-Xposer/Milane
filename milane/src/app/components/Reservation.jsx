@@ -117,7 +117,7 @@ const Reservation = () => {
             <div className="separator" />
             <p className="contact-label">Location</p>
             <address className="body-4">
-              21, Boulevard Jean-Jaurès, 94260 FRESNES <br />
+              21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES <br />
               France
             </address>
             <p className="contact-label">Lunch Time</p>
