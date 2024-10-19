@@ -4,6 +4,7 @@ import TopBar from "./components/TopBar";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Preloader from "./components/Preloader";
+import Script from "next/script";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -43,11 +44,11 @@ export default function RootLayout({ children }) {
             <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
           </a>
         </div>
-        <script
+        <Script
           type="module"
           src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
-        ></script>
-        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        ></Script>
+        <Script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></Script>
       </body>
     </html>
   );
