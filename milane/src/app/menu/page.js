@@ -8,7 +8,6 @@ const Menu = () => {
   const handleAddToCart = (dish, quantity) => {
     const cartItem = { ...dish, quantity };
     setCart((prevCart) => [...prevCart, cartItem]);
-    alert(`${dish.name} added to cart with quantity: ${quantity}`); // Optional: alert the user
   };
 
   return (
