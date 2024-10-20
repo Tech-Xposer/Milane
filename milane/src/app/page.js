@@ -1,15 +1,15 @@
 "use client";
-import Hero from "./components/Hero";
+import Hero from "../components/Hero";
 
-import Services from "./components/Services";
-import About from "./components/About";
-import Dishes from "./components/Dishes";
-import StaticMenu from "./components/StaticMenu";
-import Testinomials from "./components/Testinomials";
-import Reservation from "./components/Reservation";
-import Event from "./components/Event";
+import Services from "../components/Services";
+import About from "../components/About";
+import Dishes from "../components/Dishes";
+import StaticMenu from "../components/StaticMenu";
+import Testinomials from "../components/Testinomials";
+import Reservation from "../components/Reservation";
+import Event from "../components/Event";
 import { useState } from "react";
-import Menu from "./components/Menu";
+import Menu from "../components/Menu";
 
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);

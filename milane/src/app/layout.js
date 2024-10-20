@@ -1,9 +1,9 @@
 import localFont from "next/font/local";
 import "./globals.css";
-import TopBar from "./components/TopBar";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Preloader from "./components/Preloader";
+import TopBar from "@/components/TopBar";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Preloader from "@/components/Preloader";
 import Script from "next/script";
 
 const geistSans = localFont({
