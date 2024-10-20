@@ -16,8 +16,8 @@ const Menu = () => {
   };
 
   return (
-    <div className="h-full w-full p-6 ">
-      <div className="flex flex-col space-y-8">
+    <div className="h-full w-full p-6 flex justify-center items-center">
+      <div className="flex flex-col space-y-8 w-1/2">
         {menu &&
           menu.map((item, index) => (
             <div key={index}>

@@ -25,10 +25,11 @@ const Preloader = () => {
   }, []);
 
   return (
-    <div className="preload" data-preaload ref={preloaderRef}>
-      <div className="circle"></div>
-      <p className="text">Milane</p>
-    </div>
+    // <div className="preload" data-preaload ref={preloaderRef}>
+    //   {/* <div className="circle"></div>
+    //   <p className="text">Milane</p> */}
+    // </div>
+    <div></div>
   );
 };
 

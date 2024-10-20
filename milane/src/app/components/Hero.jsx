@@ -1,27 +1,27 @@
-"use client"
+"use client";
 import React, { useState, useEffect } from "react";
 
-const Hero = () => {
+const Hero = ({ toggleMenu }) => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
   const heroSliderItems = [
     {
       subtitle: "Traditionnel et hygiène",
       title: "Pour l'amour de la\nnourriture délicieuse",
       text: "Venez en famille et ressentez la joie d'une nourriture succulente",
-      imgSrc: "./assets/images/hero-slider-1.jpg",
+      imgSrc: "./assets/images/hero-slider-1.jpg"
     },
     {
       subtitle: "expérience délicieuse",
       title: "Saveurs inspirées par\nles saisons",
       text: "Venez en famille et ressentez la joie d'une nourriture alléchante",
-      imgSrc: "./assets/images/hero-slider-2.jpg",
+      imgSrc: "./assets/images/hero-slider-2.jpg"
     },
     {
       subtitle: "incroyable et délicieux",
       title: "Où chaque saveur raconte\nhistoire",
       text: "Nous prenons soin de nos clients comme de notre propre famille",
-      imgSrc: "./assets/images/hero-slider-3.jpg",
-    },
+      imgSrc: "./assets/images/hero-slider-3.jpg"
+    }
   ];
 
   const slideNext = () => {
@@ -47,7 +47,9 @@ const Hero = () => {
         {heroSliderItems.map((item, index) => (
           <li
             key={index}
-            className={`slider-item ${currentSlidePos === index ? 'active' : ''}`}
+            className={`slider-item ${
+              currentSlidePos === index ? "active" : ""
+            }`}
             data-hero-slider-item=""
           >
             <div className="slider-bg">
@@ -64,18 +66,23 @@ const Hero = () => {
             </p>
             <h1 className="display-1 hero-title slider-reveal">
               {item.title.split("\n").map((line, i) => (
-                <span key={i}>{line}<br /></span>
+                <span key={i}>
+                  {line}
+                  <br />
+                </span>
               ))}
             </h1>
-            <p className="body-2 hero-text slider-reveal">
-              {item.text}
-            </p>
-            <a href="#" className="btn btn-primary slider-reveal">
+            <p className="body-2 hero-text slider-reveal">{item.text}</p>
+            <div
+              href="#"
+              className="btn btn-primary slider-reveal"
+              onClick={toggleMenu}
+            >
               <span className="text text-1">View Our Menu</span>
               <span className="text text-2" aria-hidden="true">
                 View Our Menu
               </span>
-            </a>
+            </div>
           </li>
         ))}
       </ul>
