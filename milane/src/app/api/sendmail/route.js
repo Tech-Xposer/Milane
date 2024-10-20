@@ -33,8 +33,8 @@ const transporter = nodemailer.createTransport({
 const sendEmail = async (name, orders, phone) => {
   try {
     const mail = await transporter.sendMail({
-      from: process.env.NEXT_PUBLIC_PERSONAL_EMAIL,
-      to: "Dangvishwas2@gmail.com",
+      from: "Ashutosh",
+      to: process.env.NEXT_PUBLIC_NODEMAILER_RECIPIENT,
       subject: `Order from ${name}`,
       html: `
         <h3>New Order Details</h3>
