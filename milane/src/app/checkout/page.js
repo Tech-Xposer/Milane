@@ -20,7 +20,8 @@ const Checkout = () => {
 
   const [formData, setFormData] = useState({
     name: "",
-    phone: ""
+    phone: "",
+    email: ""
   });
   const [error, setError] = useState("");
 
@@ -44,7 +45,7 @@ const Checkout = () => {
     e.preventDefault();
     setLoading(true);
 
-    const { name, phone } = formData;
+    const { name, phone, email } = formData;
 
     if (!validatePhone(phone)) {
       setError("Please enter a valid 10-digit phone number.");
@@ -62,20 +63,19 @@ const Checkout = () => {
       body: JSON.stringify({
         name,
         phone,
-        orders
+        orders,
+        email
       })
     });
 
     if (!response.ok) {
       alert("Error sending email. Please try again.");
+      setLoading(false)
       return;
     }
     localStorage.clear();
     toast.success("Your order has been placed!");
     setLoading(false);
-
-    // Redirect to home page adn enable scrolling
-    document.body.style.overflow = "";
     router.push("/");
   };
 
@@ -154,7 +154,21 @@ const Checkout = () => {
                 placeholder="Your Phone Number"
               />
             </div>
-
+            <div>
+              <label htmlFor="phone" className="block text-lg">
+                Phone Number
+              </label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                className="w-full p-2 border border-[#F4BE39] rounded bg-transparent text-white"
+                required
+                placeholder="Your Email"
+              />
+            </div>
             {error && <p className="text-red-500">{error}</p>}
 
             <button

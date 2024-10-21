@@ -90,6 +90,7 @@ const Menu = ({ toggleMenu }) => {
         <button
           className="text-[#F4BE39] font-quicksand border-2 border-[#F4BE39] px-2 py-1 border-solid rounded-md hover:bg-[#F4BE39] hover:text-white transition duration-200"
           onClick={() => {
+            document.body.style.overflow = "";
             router.push("/checkout");
           }}
         >
@@ -104,7 +105,7 @@ const DishCard = ({ dish, handleAddToCart }) => {
   const [quantity, setQuantity] = useState(0);
 
   const handleQuantityDecrement = () => {
-    if (quantity > 1) {
+    if (quantity > 0) {
       setQuantity(quantity - 1);
     }
   };

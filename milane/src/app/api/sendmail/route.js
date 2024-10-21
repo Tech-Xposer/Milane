@@ -5,9 +5,9 @@ const nodemailer = require("nodemailer");
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, orders, phone } = body;
+    const { name, orders, phone, email } = body;
 
-    const response = await sendEmail(name, orders, phone);
+    const response = await sendEmail(name, orders, phone, email);
     return NextResponse.json({ message: "Email sent successfully!", response });
   } catch (error) {
     console.error("Error in API route:", error);
@@ -30,11 +30,11 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to send email
-const sendEmail = async (name, orders, phone) => {
+const sendEmail = async (name, orders, phone, email) => {
   try {
     const mail = await transporter.sendMail({
       from: "Ashutosh",
-      to: process.env.NEXT_PUBLIC_NODEMAILER_RECIPIENT,
+      to: `${process.env.NEXT_PUBLIC_NODEMAILER_RECIPIENT}, ${email}`,
       subject: `Order from ${name}`,
       html: `
         <h3>New Order Details</h3>
