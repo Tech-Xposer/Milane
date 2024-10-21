@@ -144,19 +144,10 @@ const Footer = () => {
               target="_blank"
               className="link"
             >
-              Danzia
+             {" "} Danzia
             </a>
           </p>
-          <p className="copyright">
-            Developed by 
-            <a
-              href="https://www.linkedin.com/in/asharma73/"
-              target="_blank"
-              className="link"
-            >
-              Ashutosh Sharma
-            </a>
-          </p>
+         
         </div>
       </div>
     </footer>

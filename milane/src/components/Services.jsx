@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = () => {
+const Services = ({toggleMenu}) => {
   return (
     <section
       className="section service bg-black-10 text-center"
@@ -22,7 +22,7 @@ const Services = () => {
         <ul className="grid-list">
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
+              <span href="#" className="has-before hover:shine">
                 <figure
                   className="card-banner img-holder"
                   style={{ "--width": 285, "--height": 336 }}
@@ -36,23 +36,23 @@ const Services = () => {
                     className="img-cover"
                   />
                 </figure>
-              </a>
+              </span>
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Mouton grillé</a>
+                  <span >Mouton grillé</span>
                 </h3>
 
-                <a href="#" className="btn-text hover-underline label-2">
+                <button onClick={toggleMenu} className="btn-text hover-underline label-2">
                   View Menu
-                </a>
+                </button>
               </div>
             </div>
           </li>
 
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
+              <span href="#" className="has-before hover:shine">
                 <figure
                   className="card-banner img-holder"
                   style={{ "--width": 285, "--height": 336 }}
@@ -66,23 +66,23 @@ const Services = () => {
                     className="img-cover"
                   />
                 </figure>
-              </a>
+              </span>
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Le poisson</a>
+                  <span >Le poisson</span>
                 </h3>
 
-                <a href="#" className="btn-text hover-underline label-2">
+                <button onClick={toggleMenu} className="btn-text hover-underline label-2">
                   View Menu
-                </a>
+                </button>
               </div>
             </div>
           </li>
 
           <li>
             <div className="service-card">
-              <a href="#" className="has-before hover:shine">
+              <span  className="has-before hover:shine">
                 <figure
                   className="card-banner img-holder"
                   style={{ "--width": 285, "--height": 336 }}
@@ -96,16 +96,16 @@ const Services = () => {
                     className="img-cover"
                   />
                 </figure>
-              </a>
+              </span>
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <a href="#">Poulet au beurre</a>
+                  <span >Poulet au beurre</span>
                 </h3>
 
-                <a href="#" className="btn-text hover-underline label-2">
+                <button onClick={toggleMenu}  className="btn-text hover-underline label-2">
                   View Menu
-                </a>
+                </button>
               </div>
             </div>
           </li>

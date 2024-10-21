@@ -30,7 +30,7 @@ const About = () => {
           >
             +33-0146 662 579{" "}
           </a>
-          <a href="#" className="btn btn-primary">
+          <a href="#about" className="btn btn-primary">
             <span className="text text-1">Read More</span>
             <span className="text text-2" aria-hidden="true">
               Read More

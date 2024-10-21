@@ -104,7 +104,7 @@ const Header = () => {
             </li>
             <li className="navbar-item">
               <a
-                href="/about"
+                href="#about"
                 className="navbar-link hover-underline"
                 onClick={toggleNav}
               >

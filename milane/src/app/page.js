@@ -22,9 +22,9 @@ export default function Home() {
     <main>
       <article>
         <Hero toggleMenu={handleToggleMenu} />
-        <Services />
+        <Services toggleMenu={handleToggleMenu}/>
         <About />
-        <Dishes />
+        <Dishes toggleMenu={handleToggleMenu}/>
         <StaticMenu toggleMenu={handleToggleMenu}/>
         <Testinomials />
         <Reservation />

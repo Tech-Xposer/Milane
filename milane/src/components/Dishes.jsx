@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Dishes = () => {
+const Dishes = ({toggleMenu}) => {
   return (
     <section className="special-dish text-center" aria-labelledby="dish-label">
   <div className="special-dish-banner">
@@ -36,12 +36,12 @@ const Dishes = () => {
         <del className="del body-3">€11.50</del>
         <span className="span body-1">€11.50</span>
       </div>
-      <a href="#" className="btn btn-primary">
+      <button onClick={toggleMenu} className="btn btn-primary">
         <span className="text text-1">View All Menu</span>
         <span className="text text-2" aria-hidden="true">
           View All Menu
         </span>
-      </a>
+      </button>
     </div>
   </div>
   <img
