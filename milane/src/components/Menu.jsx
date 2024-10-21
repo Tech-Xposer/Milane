@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import menu from "../app/data/menu.js";
 import { useRouter } from "next/navigation.js";
+import { toast } from "react-toastify";
 
 const Menu = ({ toggleMenu }) => {
   const [orders, setOrders] = useState([]);
@@ -100,7 +101,7 @@ const Menu = ({ toggleMenu }) => {
 };
 
 const DishCard = ({ dish, handleAddToCart }) => {
-  const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(0);
 
   const handleQuantityDecrement = () => {
     if (quantity > 1) {
@@ -114,16 +115,6 @@ const DishCard = ({ dish, handleAddToCart }) => {
 
   return (
     <div className="flex gap-5 overflow-auto p-5 w-full items-center">
-      <div className="flex flex-col items-center gap-5">
-        <img
-          src="https://www.vegrecipesofindia.com/wp-content/uploads/2020/11/pizza-recipe-2.jpg"
-          alt=""
-          className="rounded-full w-[100px] object-cover h-[100px]"
-        />
-        <span className="font-quicksand text-2xl text-white">
-          {dish.price} €
-        </span>
-      </div>
       <div className="flex flex-col items-start gap-3">
         <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
           {dish.name}
@@ -131,12 +122,16 @@ const DishCard = ({ dish, handleAddToCart }) => {
         <p className="font-quicksand text-xl text-white mb-4">
           {dish.description}
         </p>
+        <span className="font-quicksand text-2xl text-white">
+          {dish.price} €
+        </span>
         <div className="flex gap-10 items-center">
           <button
             className="bg-[#E4C590] text-black font-bold font-quicksand py-1 px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
-            onClick={() =>
-              handleAddToCart({ name: dish.name, price: dish.price }, quantity)
-            } 
+            onClick={() => {
+              handleAddToCart({ name: dish.name, price: dish.price }, quantity);
+              toast.success(`Dish added to cart`);
+            }}
           >
             Add
           </button>

@@ -8,19 +8,19 @@ const Hero = ({ toggleMenu }) => {
       subtitle: "Traditionnel et hygiène",
       title: "Pour l'amour de la\nnourriture délicieuse",
       text: "Venez en famille et ressentez la joie d'une nourriture succulente",
-      imgSrc: "./assets/images/hero-slider-1.jpg"
+      imgSrc: "/assets/images/hero-slider-1.jpg"
     },
     {
       subtitle: "expérience délicieuse",
       title: "Saveurs inspirées par\nles saisons",
       text: "Venez en famille et ressentez la joie d'une nourriture alléchante",
-      imgSrc: "./assets/images/hero-slider-2.jpg"
+      imgSrc: "/assets/images/hero-slider-2.jpg"
     },
     {
       subtitle: "incroyable et délicieux",
       title: "Où chaque saveur raconte\nhistoire",
       text: "Nous prenons soin de nos clients comme de notre propre famille",
-      imgSrc: "./assets/images/hero-slider-3.jpg"
+      imgSrc: "/assets/images/hero-slider-3.jpg"
     }
   ];
 
@@ -102,7 +102,7 @@ const Hero = ({ toggleMenu }) => {
       </button>
       <a href="#reservation" className="hero-btn has-after">
         <img
-          src="./assets/images/hero-icon.png"
+          src="/assets/images/hero-icon.png"
           width={48}
           height={48}
           alt="booking icon"

@@ -52,7 +52,7 @@ const Header = () => {
     >
       <div className="container">
         {/* Logo */}
-        <a href="https://milane.vercel.app/" className="logo">
+        <a href="/" className="logo">
           <Image
             src="/assets/images/logo.svg"
             width={160}
@@ -71,7 +71,7 @@ const Header = () => {
             <ion-icon name="close-outline" aria-hidden="true" />
           </button>
 
-          <a href="https://milane.vercel.app/" className="logo">
+          <a href="/" className="logo">
             <Image
               src="/assets/images/logo.svg"
               width={160}
@@ -82,31 +82,51 @@ const Header = () => {
 
           <ul className="navbar-list">
             <li className="navbar-item">
-              <a href="#home" className="navbar-link hover-underline active">
+              <a
+                href="#home"
+                className="navbar-link hover-underline active"
+                onClick={toggleNav}
+              >
                 <div className="separator" />
                 <span className="span">Accueil</span>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="#menu" className="navbar-link hover-underline">
+              <a
+                href="#menu"
+                className="navbar-link hover-underline"
+                onClick={toggleNav}
+              >
                 <div className="separator" />
                 <span className="span">Menus</span>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="#about" className="navbar-link hover-underline">
+              <a
+                href="#about"
+                className="navbar-link hover-underline"
+                onClick={toggleNav}
+              >
                 <div className="separator" />
                 <span className="span">À propos de nous</span>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="#" className="navbar-link hover-underline">
+              <a
+                href="#"
+                className="navbar-link hover-underline"
+                onClick={toggleNav}
+              >
                 <div className="separator" />
                 <span className="span">Nos chefs</span>
               </a>
             </li>
             <li className="navbar-item">
-              <a href="#" className="navbar-link hover-underline">
+              <a
+                href="#"
+                className="navbar-link hover-underline"
+                onClick={toggleNav}
+              >
                 <div className="separator" />
                 <span className="span">À emporter</span>
               </a>
