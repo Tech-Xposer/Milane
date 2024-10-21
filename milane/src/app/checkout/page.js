@@ -1,10 +1,14 @@
 "use client";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
+import { toast } from "react-toastify";
 
 const Checkout = () => {
+  const router = useRouter();
   // Fetch orders from local storage
   const [orders, setOrders] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const storedOrders = localStorage.getItem("orders");
@@ -38,6 +42,7 @@ const Checkout = () => {
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     const { name, phone } = formData;
 
@@ -66,7 +71,12 @@ const Checkout = () => {
       return;
     }
     localStorage.clear();
-    alert("Orders placed successfully!");
+    toast.success("Your order has been placed!");
+    setLoading(false);
+
+    // Redirect to home page adn enable scrolling
+    document.body.style.overflow = "";
+    router.push("/");
   };
 
   return (
@@ -150,8 +160,9 @@ const Checkout = () => {
             <button
               type="submit"
               className="w-full bg-[#F4BE39] text-black p-2 rounded mt-4 hover:bg-yellow-600 transition duration-200"
+              disabled={loading}
             >
-              Place Order
+              {loading ? "Placing..." : "Place Order"}
             </button>
           </form>
         </div>
