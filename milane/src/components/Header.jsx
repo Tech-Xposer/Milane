@@ -99,7 +99,7 @@ const Header = () => {
                 onClick={toggleNav}
               >
                 <div className="separator" />
-                <span className="span">Menus</span>
+                <span className="span">À Emporter</span>
               </a>
             </li>
             <li className="navbar-item">
@@ -129,7 +129,7 @@ const Header = () => {
                 onClick={toggleNav}
               >
                 <div className="separator" />
-                <span className="span">À emporter</span>
+                <span className="span">Panier</span>
               </a>
             </li>
           </ul>
