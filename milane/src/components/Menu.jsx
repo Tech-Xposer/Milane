@@ -5,43 +5,45 @@ import { useRouter } from "next/navigation.js";
 import { toast } from "react-toastify";
 
 const Menu = ({ toggleMenu }) => {
-  const [orders, setOrders] = useState([]);
+  const [cartItems, setCartItems] = useState([]);
 
   const router = useRouter();
 
-  // Load orders from local storage when the component mounts
+  // Load cart items from localStorage when the component mounts
   useEffect(() => {
-    const storedOrders = localStorage.getItem("orders");
-    if (storedOrders) {
-      setOrders(JSON.parse(storedOrders));
+    const storedCartItems = localStorage.getItem("cartItems");
+    if (storedCartItems) {
+      setCartItems(JSON.parse(storedCartItems));
     }
   }, []);
 
-  const updateLocalStorage = (newOrders) => {
-    localStorage.setItem("orders", JSON.stringify(newOrders));
+  const saveCartToLocalStorage = (newCartItems) => {
+    localStorage.setItem("cartItems", JSON.stringify(newCartItems));
   };
 
-  const handleAddToCart = (dish, quantity) => {
-    setOrders((prevOrders) => {
-      const existingItem = prevOrders.find((item) => item.name === dish.name); // Find by name
+  const addToCart = (menuItem, itemQuantity) => {
+    setCartItems((prevCartItems) => {
+      const existingItem = prevCartItems.find(
+        (item) => item.name === menuItem.name
+      );
 
-      let updatedOrders;
+      let updatedCartItems;
       if (existingItem) {
         // Update the quantity if the item already exists
-        updatedOrders = prevOrders.map((item) =>
-          item.name === dish.name
-            ? { ...item, quantity: item.quantity + quantity }
+        updatedCartItems = prevCartItems.map((item) =>
+          item.name === menuItem.name
+            ? { ...item, quantity: item.quantity + itemQuantity }
             : item
         );
       } else {
-        // Add new item to the orders
-        const orderItem = { name: dish.name, price: dish.price, quantity }; // Only include name
-        updatedOrders = [...prevOrders, orderItem];
+        // Add new item to the cart
+        const cartItem = { name: menuItem.name, price: menuItem.price, quantity: itemQuantity };
+        updatedCartItems = [...prevCartItems, cartItem];
       }
 
-      // Update local storage whenever the orders change
-      updateLocalStorage(updatedOrders);
-      return updatedOrders; // Update state with new orders
+      // Save updated cart to localStorage
+      saveCartToLocalStorage(updatedCartItems);
+      return updatedCartItems;
     });
   };
 
@@ -61,25 +63,25 @@ const Menu = ({ toggleMenu }) => {
         </div>
         <div className="flex flex-col space-y-8 overflow-auto p-5">
           {menu &&
-            menu.map((item, index) => (
+            menu.map((categoryItem, index) => (
               <div key={index} className="flex flex-col space-y-8">
                 <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
-                  {item.category}
+                  {categoryItem.category}
                 </span>
                 <p className="font-quicksand text-xl text-white mb-4">
-                  {item.description}
+                  {categoryItem.description}
                 </p>
 
                 <div
                   className="flex flex-col md:grid md:grid-cols-2 lg:grid-cols-3"
                   key={index}
                 >
-                  {item.items &&
-                    item.items.map((dish, dishIndex) => (
+                  {categoryItem.items &&
+                    categoryItem.items.map((menuItem, dishIndex) => (
                       <DishCard
                         key={dishIndex}
-                        dish={dish}
-                        handleAddToCart={handleAddToCart} // Pass handleAddToCart here
+                        menuItem={menuItem}
+                        addToCart={addToCart} // Pass addToCart here
                       />
                     ))}
                 </div>
@@ -101,41 +103,77 @@ const Menu = ({ toggleMenu }) => {
   );
 };
 
-const DishCard = ({ dish, handleAddToCart }) => {
-  const [quantity, setQuantity] = useState(0);
+const DishCard = ({ menuItem }) => {
+  const [itemQuantity, setItemQuantity] = useState(0);
+
+  // Retrieve initial quantity from localStorage if present
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const existingItem = storedCartItems.find(item => item.name === menuItem.name);
+    if (existingItem) {
+      setItemQuantity(existingItem.quantity);
+    }
+  }, [menuItem.name]);
+
+  // Save the cart items to localStorage in the desired array format
+  const saveCartToLocalStorage = (newQuantity) => {
+    let storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+    // Find if the current menuItem already exists in the cart
+    const existingItemIndex = storedCartItems.findIndex(item => item.name === menuItem.name);
+
+    if (newQuantity > 0) {
+      if (existingItemIndex > -1) {
+        // Update quantity if item exists
+        storedCartItems[existingItemIndex].quantity = newQuantity;
+      } else {
+        // Add new item to the cart
+        storedCartItems.push({
+          name: menuItem.name,
+          price: menuItem.price,
+          quantity: newQuantity,
+        });
+      }
+    } else if (existingItemIndex > -1) {
+      // Remove the item if quantity is 0
+      storedCartItems.splice(existingItemIndex, 1);
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(storedCartItems));
+  };
 
   const handleQuantityDecrement = () => {
-    if (quantity > 0) {
-      setQuantity(quantity - 1);
+    if (itemQuantity > 0) {
+      const newQuantity = itemQuantity - 1;
+      setItemQuantity(newQuantity);
+      saveCartToLocalStorage(newQuantity);
+
+      if (newQuantity === 0) {
+        toast.success(`${menuItem.name} removed from cart`);
+      }
     }
   };
 
   const handleQuantityIncrement = () => {
-    setQuantity(quantity + 1);
+    const newQuantity = itemQuantity + 1;
+    setItemQuantity(newQuantity);
+    saveCartToLocalStorage(newQuantity);
+    toast.success(`${menuItem.name} added to cart`);
   };
 
   return (
     <div className="flex gap-5 overflow-auto p-5 w-full items-center">
       <div className="flex flex-col items-start gap-3">
         <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
-          {dish.name}
+          {menuItem.name}
         </span>
         <p className="font-quicksand text-xl text-white mb-4">
-          {dish.description}
+          {menuItem.description}
         </p>
         <span className="font-quicksand text-2xl text-white">
-          {dish.price} €
+          {menuItem.price} €
         </span>
         <div className="flex gap-10 items-center">
-          <button
-            className="bg-[#E4C590] text-black font-bold font-quicksand py-1 px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
-            onClick={() => {
-              handleAddToCart({ name: dish.name, price: dish.price }, quantity);
-              toast.success(`Dish added to cart`);
-            }}
-          >
-            Add
-          </button>
           <div className="flex gap-5 items-center">
             <button
               onClick={handleQuantityDecrement}
@@ -143,7 +181,7 @@ const DishCard = ({ dish, handleAddToCart }) => {
             >
               -
             </button>
-            <p className="text-2xl text-white font-quicksand">{quantity}</p>
+            <p className="text-2xl text-white font-quicksand">{itemQuantity}</p>
 
             <button
               onClick={handleQuantityIncrement}
@@ -157,5 +195,6 @@ const DishCard = ({ dish, handleAddToCart }) => {
     </div>
   );
 };
+
 
 export default Menu;

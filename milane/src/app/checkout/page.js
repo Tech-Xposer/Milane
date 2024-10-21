@@ -11,7 +11,7 @@ const Checkout = () => {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    const storedOrders = localStorage.getItem("orders");
+    const storedOrders = localStorage.getItem("cartItems");
     if (storedOrders) {
       setOrders(JSON.parse(storedOrders));
     }

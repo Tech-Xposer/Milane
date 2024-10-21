@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@100;300;400;900&family=Quicksand:wght@300..700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Forum&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -196,6 +197,9 @@ body {
   line-height: var(--lineHeight-5);
   overflow: hidden;
   height: 300vh;
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 body.loaded {
