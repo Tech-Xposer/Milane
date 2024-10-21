@@ -165,6 +165,18 @@ const Checkout = () => {
               {loading ? "Placing..." : "Place Order"}
             </button>
           </form>
+          {/* button to clear all orders */}
+          <button
+            onClick={() => {
+              localStorage.clear();
+              setOrders([]);
+              toast.success("All orders cleared!");
+              router.push("/");
+            }}
+            className="w-full bg-[#F4BE39] text-black p-2 rounded mt-4 hover:bg-yellow-600 transition duration-200"
+          >
+            Clear Orders
+          </button>
         </div>
       ) : (
         // Display when there are no orders
