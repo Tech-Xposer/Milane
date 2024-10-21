@@ -1,6 +1,6 @@
 import React from "react";
 
-const StaticMenu = () => {
+const StaticMenu = ({toggleMenu}) => {
   return (
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
@@ -29,9 +29,9 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                    <span  className="card-title" onClick={toggleMenu}>
                       Murghi tikka
-                    </a>
+                    </span>
                   </h3>
                   <span className="badge label-1">Seasonal</span>
                   <span className="span title-2">€8.00</span>
@@ -64,9 +64,10 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                  <span  className="card-title" onClick={toggleMenu}>
+
                       Mutton Tikka
-                    </a>
+                    </span>
                   </h3>
 
                   <span className="span title-2">€9.00</span>
@@ -98,9 +99,10 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                  <span  className="card-title" onClick={toggleMenu}>
+
                       Fish Curry
-                    </a>
+                    </span>
                   </h3>
 
                   <span className="span title-2">€10.50</span>
@@ -132,9 +134,10 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                  <span  className="card-title" onClick={toggleMenu}>
+
                       Prawns masala
-                    </a>
+                    </span>
                   </h3>
 
                   <span className="badge label-1">New</span>
@@ -169,9 +172,9 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                  <span  className="card-title" onClick={toggleMenu}>
                       Jhinga korma
-                    </a>
+                    </span>
                   </h3>
 
                   <span className="span title-2">€17.00</span>
@@ -204,9 +207,10 @@ const StaticMenu = () => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <a href="#" className="card-title">
+                  <span  className="card-title" onClick={toggleMenu}>
+
                       Palak Paneer
-                    </a>
+                    </span>
                   </h3>
 
                   <span className="span title-2">€8.00</span>
@@ -226,12 +230,12 @@ const StaticMenu = () => {
           <span className="span">11:00 pm</span>
         </p>
 
-        <a href="#" className="btn btn-primary">
+        <button href="" className="btn btn-primary" onClick={toggleMenu}>
           <span className="text text-1">View All Menu</span>
           <span className="text text-2" aria-hidden="true">
             View All Menu
           </span>
-        </a>
+        </button>
 
         <img
           src="./assets/images/shape-5.png"

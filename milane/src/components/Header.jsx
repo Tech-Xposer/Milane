@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   const [navOpen, setNavOpen] = useState(false);
@@ -82,18 +83,18 @@ const Header = () => {
 
           <ul className="navbar-list">
             <li className="navbar-item">
-              <a
-                href="#home"
+              <Link
+                href="/"
                 className="navbar-link hover-underline active"
                 onClick={toggleNav}
               >
                 <div className="separator" />
                 <span className="span">Accueil</span>
-              </a>
+              </Link>
             </li>
             <li className="navbar-item">
               <a
-                href="#menu"
+                href="/#menu"
                 className="navbar-link hover-underline"
                 onClick={toggleNav}
               >
@@ -103,7 +104,7 @@ const Header = () => {
             </li>
             <li className="navbar-item">
               <a
-                href="#about"
+                href="/about"
                 className="navbar-link hover-underline"
                 onClick={toggleNav}
               >
@@ -123,7 +124,7 @@ const Header = () => {
             </li>
             <li className="navbar-item">
               <a
-                href="#"
+                href="/checkout"
                 className="navbar-link hover-underline"
                 onClick={toggleNav}
               >
@@ -159,7 +160,7 @@ const Header = () => {
         </nav>
 
         {/* Reservation Button */}
-        <a href="#reservation" className="btn btn-secondary">
+        <a href="/#reservation" className="btn btn-secondary">
           <span className="text text-1">Trouver une table</span>
           <span className="text text-2" aria-hidden="true">
             Trouver une table

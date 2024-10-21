@@ -45,13 +45,10 @@ const Reservation = () => {
               <div className="icon-wrapper">
                 <ion-icon name="person-outline" aria-hidden="true" />
                 <select name="person" className="input-field">
-                  <option value="1-person">1 Person</option>
-                  <option value="2-person">2 Person</option>
-                  <option value="3-person">3 Person</option>
-                  <option value="4-person">4 Person</option>
-                  <option value="5-person">5 Person</option>
-                  <option value="6-person">6 Person</option>
-                  <option value="7-person">7 Person</option>
+                  {Array.from({ length: 70 }, (_, i) => i + 1).map((i)=>{
+                    return   <option value="1-person" key={i}>{i} Person</option>
+                  })}
+              
                 </select>
                 <ion-icon name="chevron-down" aria-hidden="true" />
               </div>

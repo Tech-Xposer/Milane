@@ -25,7 +25,7 @@ export default function Home() {
         <Services />
         <About />
         <Dishes />
-        <StaticMenu />
+        <StaticMenu toggleMenu={handleToggleMenu}/>
         <Testinomials />
         <Reservation />
         <Features/>

@@ -27,7 +27,7 @@ const Footer = () => {
               href="mailto:Khullarakshay723@gmial.com"
               className="body-4 contact-link"
             >
-              khullarakshay723@gmail.com
+              danziastorage@gmail.com
             </a>
 
             <a href="tel:+330146662579" className="body-4 contact-link">
@@ -129,7 +129,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <a href="https://maps.app.goo.gl/7xfXpab3E2F7SC5NA?g_st=iwb" className="label-2 footer-link hover-underline">
                 Google Map
               </a>
             </li>
@@ -145,6 +145,16 @@ const Footer = () => {
               className="link"
             >
               Danzia
+            </a>
+          </p>
+          <p className="copyright">
+            Developed by 
+            <a
+              href="https://www.linkedin.com/in/asharma73/"
+              target="_blank"
+              className="link"
+            >
+              Ashutosh Sharma
             </a>
           </p>
         </div>
