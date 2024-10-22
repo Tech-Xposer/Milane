@@ -811,6 +811,11 @@ body.nav-active {
   transition: var(--transition-1);
 }
 
+.discount{
+  color: var(--gold-crayola);
+  font-size: 10px;
+}
+
 .navbar-link:is(:hover, :focus-visible, .active) .span {
   color: var(--gold-crayola);
   transform: translateX(20px);

@@ -37,7 +37,11 @@ const Menu = ({ toggleMenu }) => {
         );
       } else {
         // Add new item to the cart
-        const cartItem = { name: menuItem.name, price: menuItem.price, quantity: itemQuantity };
+        const cartItem = {
+          name: menuItem.name,
+          price: menuItem.price,
+          quantity: itemQuantity
+        };
         updatedCartItems = [...prevCartItems, cartItem];
       }
 
@@ -53,7 +57,9 @@ const Menu = ({ toggleMenu }) => {
         <div className="flex justify-around h-auto items-center w-full">
           <h1 className="text-8xl text-[#F4BE39] font-londrina text-center">
             Menu
+           
           </h1>
+
           <button
             className="h-fit text-[#F4BE39] font-quicksand border-2 border-[#F4BE39] px-2 py-1 border-solid rounded-md hover:bg-[#F4BE39] hover:text-black transition duration-200"
             onClick={toggleMenu}
@@ -92,7 +98,7 @@ const Menu = ({ toggleMenu }) => {
         <button
           className="text-[#F4BE39] font-quicksand border-2 border-[#F4BE39] px-2 py-1 border-solid rounded-md hover:bg-[#F4BE39] hover:text-white transition duration-200"
           onClick={() => {
-            document.body.style.overflow = "";
+            toggleMenu();
             router.push("/checkout");
           }}
         >
@@ -109,7 +115,9 @@ const DishCard = ({ menuItem }) => {
   // Retrieve initial quantity from localStorage if present
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-    const existingItem = storedCartItems.find(item => item.name === menuItem.name);
+    const existingItem = storedCartItems.find(
+      (item) => item.name === menuItem.name
+    );
     if (existingItem) {
       setItemQuantity(existingItem.quantity);
     }
@@ -120,7 +128,9 @@ const DishCard = ({ menuItem }) => {
     let storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
     // Find if the current menuItem already exists in the cart
-    const existingItemIndex = storedCartItems.findIndex(item => item.name === menuItem.name);
+    const existingItemIndex = storedCartItems.findIndex(
+      (item) => item.name === menuItem.name
+    );
 
     if (newQuantity > 0) {
       if (existingItemIndex > -1) {
@@ -131,7 +141,7 @@ const DishCard = ({ menuItem }) => {
         storedCartItems.push({
           name: menuItem.name,
           price: menuItem.price,
-          quantity: newQuantity,
+          quantity: newQuantity
         });
       }
     } else if (existingItemIndex > -1) {
@@ -195,6 +205,5 @@ const DishCard = ({ menuItem }) => {
     </div>
   );
 };
-
 
 export default Menu;

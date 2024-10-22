@@ -1,6 +1,6 @@
 import React from "react";
 
-const Services = ({toggleMenu}) => {
+const Services = ({ toggleMenu }) => {
   return (
     <section
       className="section service bg-black-10 text-center"
@@ -28,7 +28,7 @@ const Services = ({toggleMenu}) => {
                   style={{ "--width": 285, "--height": 336 }}
                 >
                   <img
-                    src="./assets/images/service-1.jpg"
+                    src="/assets/images/buffet.png"
                     width="285"
                     height="336"
                     loading="lazy"
@@ -40,10 +40,13 @@ const Services = ({toggleMenu}) => {
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <span >Mouton grillé</span>
+                  <span>Buffet à volonté</span>
                 </h3>
 
-                <button onClick={toggleMenu} className="btn-text hover-underline label-2">
+                <button
+                  onClick={toggleMenu}
+                  className="btn-text hover-underline label-2"
+                >
                   View Menu
                 </button>
               </div>
@@ -58,7 +61,7 @@ const Services = ({toggleMenu}) => {
                   style={{ "--width": 285, "--height": 336 }}
                 >
                   <img
-                    src="./assets/images/service-2.jpg"
+                    src="/assets/images/service-2.jpg"
                     width="285"
                     height="336"
                     loading="lazy"
@@ -70,10 +73,13 @@ const Services = ({toggleMenu}) => {
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <span >Le poisson</span>
+                  <span>Le poisson</span>
                 </h3>
 
-                <button onClick={toggleMenu} className="btn-text hover-underline label-2">
+                <button
+                  onClick={toggleMenu}
+                  className="btn-text hover-underline label-2"
+                >
                   View Menu
                 </button>
               </div>
@@ -82,13 +88,13 @@ const Services = ({toggleMenu}) => {
 
           <li>
             <div className="service-card">
-              <span  className="has-before hover:shine">
+              <span className="has-before hover:shine">
                 <figure
                   className="card-banner img-holder"
                   style={{ "--width": 285, "--height": 336 }}
                 >
                   <img
-                    src="./assets/images/service-3.jpg"
+                    src="/assets/images/service-3.jpg"
                     width="285"
                     height="336"
                     loading="lazy"
@@ -100,10 +106,13 @@ const Services = ({toggleMenu}) => {
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <span >Poulet au beurre</span>
+                  <span>Poulet au beurre</span>
                 </h3>
 
-                <button onClick={toggleMenu}  className="btn-text hover-underline label-2">
+                <button
+                  onClick={toggleMenu}
+                  className="btn-text hover-underline label-2"
+                >
                   View Menu
                 </button>
               </div>

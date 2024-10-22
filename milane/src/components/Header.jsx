@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ toggleMenu }) => {
   const [navOpen, setNavOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const headerRef = useRef(null);
@@ -93,13 +93,34 @@ const Header = () => {
               </Link>
             </li>
             <li className="navbar-item">
+              <div
+                onClick={() => {
+                  toggleNav();
+                  toggleMenu();
+                }}
+                className="navbar-link hover-underline"
+              >
+                <div className="separator" />
+
+                <span className="span relative ">
+                  À Emporter{" "}
+                  <img
+                    src="/assets/images/surplus.png"
+                    alt=""
+                    className="h-12 absolute bottom-6 left-4"
+                  />
+                </span>
+              </div>
+            </li>
+            <li className="navbar-item">
               <a
                 href="/#menu"
                 className="navbar-link hover-underline"
                 onClick={toggleNav}
               >
                 <div className="separator" />
-                <span className="span">À Emporter</span>
+
+                <span className="span">Livraison à domicile</span>
               </a>
             </li>
             <li className="navbar-item">
@@ -112,16 +133,7 @@ const Header = () => {
                 <span className="span">À propos de nous</span>
               </a>
             </li>
-            <li className="navbar-item">
-              <a
-                href="#"
-                className="navbar-link hover-underline"
-                onClick={toggleNav}
-              >
-                <div className="separator" />
-                <span className="span">Nos chefs</span>
-              </a>
-            </li>
+
             <li className="navbar-item">
               <a
                 href="/checkout"

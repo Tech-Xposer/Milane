@@ -22,13 +22,13 @@ export default function Home() {
     <main>
       <article>
         <Hero toggleMenu={handleToggleMenu} />
-        <Services toggleMenu={handleToggleMenu}/>
+        <Services toggleMenu={handleToggleMenu} />
         <About />
-        <Dishes toggleMenu={handleToggleMenu}/>
-        <StaticMenu toggleMenu={handleToggleMenu}/>
+        <Dishes toggleMenu={handleToggleMenu} />
+        <StaticMenu toggleMenu={handleToggleMenu} />
         <Testinomials />
         <Reservation />
-        <Features/>
+        <Features />
         <Event />
       </article>
       {menuOpen && <Menu toggleMenu={handleToggleMenu} />}

@@ -23,12 +23,12 @@ const About = () => {
             ambiance chaleureuse et accueillante&rsquo; invitant chacun à savourer des
             moments inoubliables autour d'une bonne table.
           </p>
-          <div className="contact-label">Book Through Call</div>
+          <div className="contact-label">Réservation par téléphone</div>
           <a
             href="tel:+330146662579"
             className="body-1 contact-number hover-underline"
           >
-            +33-0146 662 579{" "}
+            0146 662 579{" "}
           </a>
           <a href="#about" className="btn btn-primary">
             <span className="text text-1">Read More</span>
@@ -54,7 +54,7 @@ const About = () => {
             data-parallax-speed="1.75"
           >
             <img
-              src="./assets/images/about-abs-image.jpg"
+              src="./assets/images/about-abs-image-1.png"
               width={285}
               height={285}
               loading="lazy"
