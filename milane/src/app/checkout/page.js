@@ -91,7 +91,7 @@ const Checkout = () => {
   const totalPrice = orders.reduce((total, order) => total + (order.quantity * order.price), 0).toFixed(2);
 
   return (
-    <div className="flex flex-col items-center justify-center p-5 text-white h-screen w-full overflow-auto">
+    <div className="flex flex-col items-center justify-center p-5 text-white mt-[100px] md:h-screen w-full overflow-y-hidden">
       <h2 className="text-5xl mb-4 text-[#F4BE39] font-londrina">Checkout</h2>
 
       {orders.length ? (

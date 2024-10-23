@@ -103,8 +103,7 @@ const Header = ({ toggleMenu }) => {
                 <div className="separator" />
 
                 <span className="span relative ">
-                  À Emporter{" "}
-                  -
+                  À Emporter -
                   <img
                     src="/assets/images/discount.gif"
                     alt=""
@@ -114,15 +113,17 @@ const Header = ({ toggleMenu }) => {
               </div>
             </li>
             <li className="navbar-item">
-              <a
-                href="/#menu"
+              <div
                 className="navbar-link hover-underline"
-                onClick={toggleNav}
+                onClick={() => {
+                  toggleNav();
+                  toggleMenu();
+                }}
               >
                 <div className="separator" />
 
                 <span className="span">Livraison à domicile</span>
-              </a>
+              </div>
             </li>
             <li className="navbar-item">
               <a
