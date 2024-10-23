@@ -57,7 +57,6 @@ const Menu = ({ toggleMenu }) => {
         <div className="flex justify-around h-auto items-center w-full">
           <h1 className="text-8xl text-[#F4BE39] font-londrina text-center">
             Menu
-           
           </h1>
 
           <button
@@ -111,6 +110,7 @@ const Menu = ({ toggleMenu }) => {
 
 const DishCard = ({ menuItem }) => {
   const [itemQuantity, setItemQuantity] = useState(0);
+  const [selectedOption, setSelectedOption] = useState(null); // State for storing selected option
 
   // Retrieve initial quantity from localStorage if present
   useEffect(() => {
@@ -123,11 +123,9 @@ const DishCard = ({ menuItem }) => {
     }
   }, [menuItem.name]);
 
-  // Save the cart items to localStorage in the desired array format
+  // Save the cart items to localStorage
   const saveCartToLocalStorage = (newQuantity) => {
     let storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-
-    // Find if the current menuItem already exists in the cart
     const existingItemIndex = storedCartItems.findIndex(
       (item) => item.name === menuItem.name
     );
@@ -141,7 +139,8 @@ const DishCard = ({ menuItem }) => {
         storedCartItems.push({
           name: menuItem.name,
           price: menuItem.price,
-          quantity: newQuantity
+          quantity: newQuantity,
+          option: selectedOption // Save selected option with item
         });
       }
     } else if (existingItemIndex > -1) {
@@ -171,6 +170,10 @@ const DishCard = ({ menuItem }) => {
     toast.success(`${menuItem.name} added to cart`);
   };
 
+  const handleOptionChange = (optionName) => {
+    setSelectedOption(optionName); // Update selected option state
+  };
+
   return (
     <div className="flex gap-5 overflow-auto p-5 w-full items-center">
       <div className="flex flex-col items-start gap-3">
@@ -183,6 +186,30 @@ const DishCard = ({ menuItem }) => {
         <span className="font-quicksand text-2xl text-white">
           {menuItem.price} €
         </span>
+
+        {/* Display choice options if available */}
+        <div className="flex gap-5 items-center">
+          {menuItem.options &&
+            menuItem.options.map((option, index) => (
+              <div key={index} className="flex gap-1 items-center">
+                <input
+                  type="radio"
+                  name="menuOption" // Same name for grouping
+                  id={`option-${index}`} // Unique ID
+                  value={option.name} // Value for the option
+                  checked={selectedOption === option.name} // Check if selected
+                  onChange={() => handleOptionChange(option.name)} // Handle change
+                />
+                <label
+                  htmlFor={`option-${index}`}
+                  className="text-2xl text-white font-quicksand"
+                >
+                  {option.name}
+                </label>
+              </div>
+            ))}
+        </div>
+
         <div className="flex gap-10 items-center">
           <div className="flex gap-5 items-center">
             <button
@@ -192,7 +219,6 @@ const DishCard = ({ menuItem }) => {
               -
             </button>
             <p className="text-2xl text-white font-quicksand">{itemQuantity}</p>
-
             <button
               onClick={handleQuantityIncrement}
               className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"

@@ -30,8 +30,8 @@ const Footer = () => {
               danziastorage@gmail.com
             </a>
 
-            <a href="tel:+330146662579" className="body-4 contact-link">
-              Booking Request : +33-0146 662 579
+            <a href="tel:0146662579" className="body-4 contact-link">
+              Booking Request : 0146 662 579
             </a>
 
             <p className="body-4">Open : 09:00 am - 11:00 pm</p>
@@ -129,7 +129,10 @@ const Footer = () => {
             </li>
 
             <li>
-              <a href="https://maps.app.goo.gl/7xfXpab3E2F7SC5NA?g_st=iwb" className="label-2 footer-link hover-underline">
+              <a
+                href="https://maps.app.goo.gl/7xfXpab3E2F7SC5NA?g_st=iwb"
+                className="label-2 footer-link hover-underline"
+              >
                 Google Map
               </a>
             </li>
@@ -144,10 +147,10 @@ const Footer = () => {
               target="_blank"
               className="link"
             >
-             {" "} Danzia
+              {" "}
+              Danzia
             </a>
           </p>
-         
         </div>
       </div>
     </footer>

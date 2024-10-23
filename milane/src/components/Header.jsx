@@ -104,10 +104,11 @@ const Header = ({ toggleMenu }) => {
 
                 <span className="span relative ">
                   À Emporter{" "}
+                  -
                   <img
-                    src="/assets/images/surplus.png"
+                    src="/assets/images/discount.gif"
                     alt=""
-                    className="h-12 absolute bottom-6 left-4"
+                    className="h-10 absolute bottom-7 left-4"
                   />
                 </span>
               </div>
@@ -163,10 +164,10 @@ const Header = ({ toggleMenu }) => {
             <div className="separator" />
             <p className="contact-label">Demande de réservation</p>
             <a
-              href="tel:+330146662579"
+              href="tel:0146662579"
               className="body-1 contact-number hover-underline"
             >
-              +33-01 46 66 25 79
+              -01 46 66 25 79
             </a>
           </div>
         </nav>

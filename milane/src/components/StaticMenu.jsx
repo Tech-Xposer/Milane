@@ -1,6 +1,6 @@
 import React from "react";
 
-const StaticMenu = ({toggleMenu}) => {
+const StaticMenu = ({ toggleMenu }) => {
   return (
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
@@ -29,7 +29,7 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                    <span  className="card-title" onClick={toggleMenu}>
+                    <span className="card-title" onClick={toggleMenu}>
                       Murghi tikka
                     </span>
                   </h3>
@@ -64,8 +64,7 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                  <span  className="card-title" onClick={toggleMenu}>
-
+                    <span className="card-title" onClick={toggleMenu}>
                       Mutton Tikka
                     </span>
                   </h3>
@@ -87,7 +86,7 @@ const StaticMenu = ({toggleMenu}) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-3.jpg"
+                  src="./assets/images/butter-chicken.png"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -99,9 +98,8 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                  <span  className="card-title" onClick={toggleMenu}>
-
-                      Fish Curry
+                    <span className="card-title" onClick={toggleMenu}>
+                      Poulet au beurre
                     </span>
                   </h3>
 
@@ -109,7 +107,8 @@ const StaticMenu = ({toggleMenu}) => {
                 </div>
 
                 <p className="card-text label-1">
-                  Poisson sauce curry, coriandre fraîche.
+                  Savourez l'onctuosité parfaite d'un poulet tendre dans une
+                  sauce riche et épicée.
                 </p>
               </div>
             </div>
@@ -134,8 +133,7 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                  <span  className="card-title" onClick={toggleMenu}>
-
+                    <span className="card-title" onClick={toggleMenu}>
                       Prawns masala
                     </span>
                   </h3>
@@ -160,7 +158,7 @@ const StaticMenu = ({toggleMenu}) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-7.jpg"
+                  src="./assets/images/cheese-naan.png"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -172,8 +170,8 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                  <span  className="card-title" onClick={toggleMenu}>
-                      Jhinga korma
+                    <span className="card-title" onClick={toggleMenu}>
+                      Naan au fromage
                     </span>
                   </h3>
 
@@ -181,8 +179,8 @@ const StaticMenu = ({toggleMenu}) => {
                 </div>
 
                 <p className="card-text label-1">
-                  Spécialité du chef. Gambas préparées à la crème de noix de
-                  cajou, raisins secs, cumin, ail, gingembre (peu relevé)
+                  Dégustez un naan chaud et moelleux, généreusement garni de
+                  fromage fondant
                 </p>
               </div>
             </div>
@@ -207,8 +205,7 @@ const StaticMenu = ({toggleMenu}) => {
               <div>
                 <div className="title-wrapper">
                   <h3 className="title-3">
-                  <span  className="card-title" onClick={toggleMenu}>
-
+                    <span className="card-title" onClick={toggleMenu}>
                       Palak Paneer
                     </span>
                   </h3>

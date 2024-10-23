@@ -13,8 +13,8 @@ const Reservation = () => {
             <h2 className="headline-1 text-center">Online Reservation</h2>
             <p className="form-text text-center">
               Booking request{" "}
-              <a href="tel:+330146662579" className="link">
-                +33-0146 662 579
+              <a href="tel:0146662579" className="link">
+                0146 662 579
               </a>
               or fill out the order form
             </p>
@@ -45,10 +45,13 @@ const Reservation = () => {
               <div className="icon-wrapper">
                 <ion-icon name="person-outline" aria-hidden="true" />
                 <select name="person" className="input-field">
-                  {Array.from({ length: 70 }, (_, i) => i + 1).map((i)=>{
-                    return   <option value="1-person" key={i}>{i} Person</option>
+                  {Array.from({ length: 70 }, (_, i) => i + 1).map((i) => {
+                    return (
+                      <option value="1-person" key={i}>
+                        {i} Person
+                      </option>
+                    );
                   })}
-              
                 </select>
                 <ion-icon name="chevron-down" aria-hidden="true" />
               </div>
@@ -106,10 +109,10 @@ const Reservation = () => {
             <h2 className="headline-1 text-center">Contact Us</h2>
             <p className="contact-label">Booking Request</p>
             <a
-              href="tel:+330146662579"
+              href="tel:0146662579"
               className="body-1 contact-number hover-underline"
             >
-              +33- 0146 662 579
+              - 0146 662 579
             </a>
             <div className="separator" />
             <p className="contact-label">Location</p>
@@ -120,12 +123,12 @@ const Reservation = () => {
             <p className="contact-label">Lunch Time</p>
             <p className="body-4">
               Monday to Sunday <br />
-              11.00 am - 2.30pm
+              12:00 pm to 14:30
             </p>
             <p className="contact-label">Dinner Time</p>
             <p className="body-4">
               Monday to Sunday <br />
-              05.00 pm - 10.00pm
+              19:00-23:00
             </p>
           </div>
         </div>

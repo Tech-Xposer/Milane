@@ -8,26 +8,25 @@ const TopBar = () => {
           <div className="icon">
             <ion-icon name="location-outline" aria-hidden="true" />
           </div>
-          <span className="span">21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES</span>
+          <span className="span">
+            21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES
+          </span>
         </address>
         <div className="separator" />
         <div className="topbar-item item-2">
           <div className="icon">
             <ion-icon name="time-outline" aria-hidden="true" />
           </div>
-          <span className="span">Daily : 8.00 am to 10.00 pm</span>
+          <span className="span">Daily : 12:00 to 23.00 </span>
         </div>
-        <a href="tel:+33014662579" className="topbar-item link">
+        <a href="tel:014662579" className="topbar-item link">
           <div className="icon">
             <ion-icon name="call-outline" aria-hidden="true" />
           </div>
-          <span className="span">+33 014 66 25 79</span>
+          <span className="span"> 014 66 25 79</span>
         </a>
         <div className="separator" />
-        <a
-          href="mailto:danziastorage@gmail.com"
-          className="topbar-item link"
-        >
+        <a href="mailto:danziastorage@gmail.com" className="topbar-item link">
           <div className="icon">
             <ion-icon name="mail-outline" aria-hidden="true" />
           </div>

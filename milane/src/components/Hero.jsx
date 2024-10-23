@@ -5,22 +5,34 @@ const Hero = ({ toggleMenu }) => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
   const heroSliderItems = [
     {
+      subtitle: "Un festin épicé",
+      title: "Un goût authentique de\nBiryani au poulet",
+      text: "Savourez chaque bouchée de notre Biryani, une explosion de saveurs exquises qui éveilleront vos sens.",
+      imgSrc: "/assets/images/hero-slider-11.jpg"
+    },
+    {
       subtitle: "Traditionnel et hygiène",
-      title: "Pour l'amour de la\nnourriture délicieuse",
-      text: "Venez en famille et ressentez la joie d'une nourriture succulente",
+      title: "Pour l'amour du\nTandoori Chicken",
+      text: "Venez en famille et savourez le goût fumé et épicé de notre Tandoori Chicken, une vraie délice.",
       imgSrc: "/assets/images/hero-slider-12.jpg"
     },
     {
-      subtitle: "expérience délicieuse",
-      title: "Saveurs inspirées par\nles saisons",
-      text: "Venez en famille et ressentez la joie d'une nourriture alléchante",
-      imgSrc: "/assets/images/hero-slider-12.jpg"
-    },
-    {
-      subtitle: "incroyable et délicieux",
-      title: "Où chaque saveur raconte\nhistoire",
-      text: "Nous prenons soin de nos clients comme de notre propre famille",
+      subtitle: "Incroyable et délicieux",
+      title: "Un voyage savoureux avec\nle Dosa traditionnel",
+      text: "Nous prenons soin de nos clients comme de notre propre famille, avec chaque bouchée de Dosa croustillant et savoureux.",
       imgSrc: "/assets/images/hero-slider-13.jpg"
+    },
+    {
+      subtitle: "Culture indienne enrichie",
+      title: "Une expérience culinaire\nau cœur des traditions",
+      text: "Plongez dans la richesse des saveurs indiennes, où chaque plat raconte une histoire de culture et d'héritage.",
+      imgSrc: "/assets/images/hero-slider-15.png"
+    },
+    {
+      subtitle: "Croustillant et épicé",
+      title: "L'irrésistible\nSamosa traditionnel",
+      text: "Savourez le mélange parfait de pommes de terre épicées et d'une pâte dorée et croustillante.",
+      imgSrc: "/assets/images/hero-slider-15 (3).png"
     }
   ];
 

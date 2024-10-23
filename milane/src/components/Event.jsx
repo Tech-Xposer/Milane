@@ -18,16 +18,14 @@ const Event = () => {
                 style={{ width: 350, height: 450 }}
               >
                 <img
-                  src="./assets/images/event-1.jpg"
+                  src="/assets/images/event-1.jpg"
                   width={350}
                   height={450}
                   loading="lazy"
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-15">
-                  15/09/2022
-                </time>
+               
               </div>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">
@@ -47,16 +45,14 @@ const Event = () => {
                 style={{ width: 350, height: 450 }}
               >
                 <img
-                  src="./assets/images/event-2.jpg"
+                  src="/assets/images/birthday.png"
                   width={350}
                   height={450}
                   loading="lazy"
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-08">
-                  08/09/2022
-                </time>
+                
               </div>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">
@@ -75,16 +71,14 @@ const Event = () => {
                 style={{ width: 350, height: 450 }}
               >
                 <img
-                  src="./assets/images/event-3.jpg"
+                  src="./assets/images/Untitled design (1).png"
                   width={350}
                   height={450}
                   loading="lazy"
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-                <time className="publish-date label-2" dateTime="2022-09-03">
-                  03/09/2022
-                </time>
+               
               </div>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">Recipie</p>

@@ -20,12 +20,12 @@ const About = () => {
             mission de célébrer les saveurs authentiques et les traditions
             culinaires. Chaque plat est préparé avec des ingrédients locaux et
             de saison&rsquo; garantissant fraîcheur et qualité. Nous créons une
-            ambiance chaleureuse et accueillante&rsquo; invitant chacun à savourer des
-            moments inoubliables autour d'une bonne table.
+            ambiance chaleureuse et accueillante&rsquo; invitant chacun à
+            savourer des moments inoubliables autour d'une bonne table.
           </p>
           <div className="contact-label">Réservation par téléphone</div>
           <a
-            href="tel:+330146662579"
+            href="tel:0146662579"
             className="body-1 contact-number hover-underline"
           >
             0146 662 579{" "}
