@@ -34,7 +34,14 @@ const Footer = () => {
               Booking Request : 0146 662 579
             </a>
 
-            <p className="body-4">Open : 09:00 am - 11:00 pm</p>
+            <span className="flex flex-col">
+              <b className="text-[#]">Lunch Time</b> Monday to Sunday 12:00 pm
+              to 14:30{" "}
+            </span>
+            <span className="flex flex-col">
+              {" "}
+              <b>Dinner Time</b> Monday to Sunday 19:00-23:00
+            </span>
 
             <div className="wrapper">
               <div className="separator"></div>

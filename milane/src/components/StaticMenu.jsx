@@ -223,10 +223,13 @@ const StaticMenu = ({ toggleMenu }) => {
         </ul>
 
         <p className="menu-text text-center">
-          During winter daily from <span className="span">9:00 pm</span> to{" "}
-          <span className="span">11:00 pm</span>
+          Lunch Time <span className="span">12:00 pm</span> to{" "}
+          <span className="span">14:30</span>
         </p>
-
+        <p className="menu-text text-center">
+          Dinner Time <span className="span">19:00</span> to{" "}
+          <span className="span">23:00</span>
+        </p>
         <button href="" className="btn btn-primary" onClick={toggleMenu}>
           <span className="text text-1">View All Menu</span>
           <span className="text text-2" aria-hidden="true">

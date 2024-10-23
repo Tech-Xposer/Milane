@@ -13,11 +13,21 @@ const TopBar = () => {
           </span>
         </address>
         <div className="separator" />
-        <div className="topbar-item item-2">
-          <div className="icon">
+        <div className="topbar-item item-2 ">
+          <div className="icon ">
             <ion-icon name="time-outline" aria-hidden="true" />
           </div>
-          <span className="span">Daily : 12:00 to 23.00 </span>
+          <div className="flex gap-5">
+            {" "}
+            <span className="span">
+              <b className="text-[#]">Lunch Time:</b> Monday to Sunday
+              12:00 pm to 14:30{" "}
+            </span>
+            <span>
+              {" "}
+              <b>Dinner Time</b>: Monday to Sunday 19:00-23:00
+            </span>
+          </div>
         </div>
         <a href="tel:014662579" className="topbar-item link">
           <div className="icon">

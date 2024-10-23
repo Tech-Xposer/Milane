@@ -29,7 +29,7 @@ const Checkout = () => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
       ...prevData,
-      [name]: value,
+      [name]: value
     }));
   };
 
@@ -59,7 +59,7 @@ const Checkout = () => {
       const response = await fetch("/api/sendmail", {
         method: "POST",
         headers: {
-          "Content-Type": "application/json",
+          "Content-Type": "application/json"
         },
         body: JSON.stringify({
           name,
@@ -67,8 +67,8 @@ const Checkout = () => {
           orders,
           email,
           address,
-          zipcode,
-        }),
+          zipcode
+        })
       });
 
       if (!response.ok) {
@@ -88,10 +88,12 @@ const Checkout = () => {
     }
   };
 
-  const totalPrice = orders.reduce((total, order) => total + (order.quantity * order.price), 0).toFixed(2);
+  const totalPrice = orders
+    .reduce((total, order) => total + order.quantity * order.price, 0)
+    .toFixed(2);
 
   return (
-    <div className="flex flex-col items-center justify-center p-5 text-white mt-[100px] md:h-screen w-full overflow-y-hidden">
+    <div className="flex flex-col items-center justify-center p-5 text-white mt-[100px] md:h-screen w-full ">
       <h2 className="text-5xl mb-4 text-[#F4BE39] font-londrina">Checkout</h2>
 
       {orders.length ? (
@@ -103,39 +105,74 @@ const Checkout = () => {
             <table className="table-auto w-full mb-6">
               <thead>
                 <tr>
-                  <th className="text-left p-2 border-b border-[#F4BE39]">Product</th>
-                  <th className="text-left p-2 border-b border-[#F4BE39]">Quantity</th>
-                  <th className="text-left p-2 border-b border-[#F4BE39]">Price (€)</th>
+                  <th className="text-left p-2 border-b border-[#F4BE39]">
+                    Product
+                  </th>
+                  <th className="text-left p-2 border-b border-[#F4BE39]">
+                    Quantity
+                  </th>
+                  <th className="text-left p-2 border-b border-[#F4BE39]">
+                    Price (€)
+                  </th>
+                  <th className="text-left p-2 border-b border-[#F4BE39]">
+                    Option
+                  </th>
                 </tr>
               </thead>
               <tbody>
                 {orders.map((order, index) => (
-                  <tr key={index} className="border-b border-[#F4BE39]">
-                    <td className="p-2">{order.name}</td>
-                    <td className="p-2">{order.quantity}</td>
-                    <td className="p-2">{(order.quantity * order.price).toFixed(2)} €</td>
-                  </tr>
+                  <>
+                    {" "}
+                    <tr key={index} className="border-b border-[#F4BE39]">
+                      <td className="p-2">{order.name}</td>
+                      <td className="p-2">{order.quantity}</td>
+                      <td className="p-2">
+                        {(order.quantity * order.price).toFixed(2)} €
+                      </td>
+                      {order.option && (
+                        <td colSpan="3" className="p-2">
+                          {order.option}
+                        </td>
+                      )}
+                    </tr>
+                  </>
                 ))}
+                <tr>
+                  <td colSpan="2" className="text-right p-2 font-semibold">
+                    Total:
+                  </td>
+                  <td className="p-2 font-semibold">{totalPrice} €</td>
+                </tr>
               </tbody>
             </table>
           </div>
           <div className="flex gap-4 items-center m-5">
             <span
               onClick={() => setOrderType("takeaway")}
-              className={`cursor-pointer ${orderType === "takeaway" ? "bg-[#F4BE39] p-2 text-black font-londrina" : "text-white"}`}
+              className={`cursor-pointer ${
+                orderType === "takeaway"
+                  ? "bg-[#F4BE39] p-2 text-black font-londrina"
+                  : "text-white"
+              }`}
             >
               À Emporter
             </span>
             <span
               onClick={() => setOrderType("home-delivery")}
-              className={`cursor-pointer ${orderType === "home-delivery" ? "bg-[#F4BE39] p-2 text-black font-londrina" : "text-white"}`}
+              className={`cursor-pointer ${
+                orderType === "home-delivery"
+                  ? "bg-[#F4BE39] p-2 text-black font-londrina"
+                  : "text-white"
+              }`}
             >
               Livraison à domicile
             </span>
           </div>
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label htmlFor="name" className="block text-lg">Name</label>
+              <label htmlFor="name" className="block text-lg">
+                Name
+              </label>
               <input
                 type="text"
                 id="name"
@@ -149,7 +186,9 @@ const Checkout = () => {
             </div>
 
             <div>
-              <label htmlFor="phone" className="block text-lg">Phone Number</label>
+              <label htmlFor="phone" className="block text-lg">
+                Phone Number
+              </label>
               <input
                 type="tel"
                 id="phone"
@@ -163,7 +202,9 @@ const Checkout = () => {
             </div>
 
             <div>
-              <label htmlFor="email" className="block text-lg">Email</label>
+              <label htmlFor="email" className="block text-lg">
+                Email
+              </label>
               <input
                 type="email"
                 id="email"
@@ -179,7 +220,9 @@ const Checkout = () => {
             {orderType === "home-delivery" && (
               <>
                 <div>
-                  <label htmlFor="address" className="block text-lg">Address</label>
+                  <label htmlFor="address" className="block text-lg">
+                    Address
+                  </label>
                   <input
                     type="text"
                     id="address"
@@ -192,7 +235,9 @@ const Checkout = () => {
                   />
                 </div>
                 <div>
-                  <label htmlFor="zipcode" className="block text-lg">Zip Code</label>
+                  <label htmlFor="zipcode" className="block text-lg">
+                    Zip Code
+                  </label>
                   <input
                     type="text"
                     id="zipcode"
@@ -232,8 +277,15 @@ const Checkout = () => {
         </div>
       ) : (
         <div className="flex flex-col items-center justify-center h-screen w-full gap-10">
-          <span className="text-center text-5xl font-semibold text-[#F4BE39]">Your cart is empty!</span>
-          <Link href="/" className="text-3xl bg-[#F4BE39] p-4 rounded text-black hover:bg-yellow-600 transition duration-200">Go to Home</Link>
+          <span className="text-center text-5xl font-semibold text-[#F4BE39]">
+            Your cart is empty!
+          </span>
+          <Link
+            href="/"
+            className="text-3xl bg-[#F4BE39] p-4 rounded text-black hover:bg-yellow-600 transition duration-200"
+          >
+            Go to Home
+          </Link>
         </div>
       )}
     </div>

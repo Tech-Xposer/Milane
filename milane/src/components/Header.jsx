@@ -154,8 +154,15 @@ const Header = ({ toggleMenu }) => {
             <address className="body-4">
               21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES <br />
               France
-            </address>
-            <p className="body-4 navbar-text">Open: 9.30 am - 2.30pm</p>
+            </address>{" "}
+            <span className="flex flex-col">
+              <b className="text-[#]">Lunch Time</b> Monday to Sunday 12:00 pm
+              to 14:30{" "}
+            </span>
+            <span className="flex flex-col">
+              {" "}
+              <b>Dinner Time</b> Monday to Sunday 19:00-23:00
+            </span>
             <a
               href="mailto:khullarakshay723@gmail.com"
               className="body-4 sidebar-link"

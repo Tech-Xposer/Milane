@@ -188,7 +188,10 @@ const DishCard = ({ menuItem }) => {
         </span>
 
         {/* Display choice options if available */}
-        <div className="flex gap-5 items-center">
+        <div className="flex gap-5 items-center flex-col">
+          <span className="text-2xl text-[#F4BE39] font-quicksand">
+            Choose any one
+          </span>
           {menuItem.options &&
             menuItem.options.map((option, index) => (
               <div key={index} className="flex gap-1 items-center">
@@ -199,6 +202,7 @@ const DishCard = ({ menuItem }) => {
                   value={option.name} // Value for the option
                   checked={selectedOption === option.name} // Check if selected
                   onChange={() => handleOptionChange(option.name)} // Handle change
+
                 />
                 <label
                   htmlFor={`option-${index}`}
