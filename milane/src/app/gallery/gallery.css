@@ -92,7 +92,7 @@ header h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 10px; /* Reduce gap for better spacing on mobile */
+  gap: 20px; /* Reduce gap for better spacing on mobile */
   width: 100%;
   max-width: 1200px; /* Limit width to avoid stretching too wide */
 }

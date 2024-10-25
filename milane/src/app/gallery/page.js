@@ -3,7 +3,7 @@ import React, { useEffect } from "react";
 import "./gallery.css";
 import Script from "next/script";
 
-const page = () => {
+const GalleryPage = () => {
   useEffect(() => {
     const starContainer = document.querySelector(".sparkling-stars");
     const numStars = 100; // Adjust number of stars
@@ -213,9 +213,8 @@ const page = () => {
         </span>
         <img id="modal-img" src="" alt="" />
       </div>
-      <Script src="./script.js"></Script>
     </>
   );
 };
 
-export default page;
+export default GalleryPage;

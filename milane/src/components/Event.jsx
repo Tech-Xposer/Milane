@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Event = () => {
@@ -13,7 +14,8 @@ const Event = () => {
         <ul className="grid-list">
           <li>
             <div className="event-card has-before hover:shine">
-              <div
+              <Link
+                href={"/gallery"}
                 className="card-banner img-holder"
                 style={{ width: 350, height: 450 }}
               >
@@ -25,8 +27,7 @@ const Event = () => {
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-               
-              </div>
+              </Link>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">
                   Nourriture&rsquo; saveur
@@ -40,7 +41,8 @@ const Event = () => {
           </li>
           <li>
             <div className="event-card has-before hover:shine">
-              <div
+              <Link
+              href="/gallery"
                 className="card-banner img-holder"
                 style={{ width: 350, height: 450 }}
               >
@@ -52,8 +54,7 @@ const Event = () => {
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-                
-              </div>
+              </Link>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">
                   Nourriture saine
@@ -78,7 +79,6 @@ const Event = () => {
                   alt="Flavour so good you’ll try to eat with your eyes."
                   className="img-cover"
                 />
-               
               </div>
               <div className="card-content">
                 <p className="card-subtitle label-2 text-center">Recipie</p>
@@ -89,12 +89,12 @@ const Event = () => {
             </div>
           </li>
         </ul>
-        <a href="#" className="btn btn-primary">
+        <Link href="/gallery" className="btn btn-primary">
           <span className="text text-1">Découvrez notre blog</span>
           <span className="text text-2" aria-hidden="true">
             Découvrez notre blog
           </span>
-        </a>
+        </Link>
       </div>
     </section>
   );
