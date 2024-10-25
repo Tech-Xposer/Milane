@@ -93,15 +93,20 @@ const Footer = () => {
             </li>
 
             <li>
-              <Link href="/gallery" className="label-2 footer-link hover-underline">
+              <Link
+                href="/gallery"
+                className="label-2 footer-link hover-underline"
+              >
                 Gallery
               </Link>
             </li>
 
-          
             <li>
-              <a href="/checkout" className="label-2 footer-link hover-underline">
-              Panier
+              <a
+                href="/checkout"
+                className="label-2 footer-link hover-underline"
+              >
+                Panier
               </a>
             </li>
           </ul>
@@ -119,8 +124,6 @@ const Footer = () => {
               </a>
             </li>
 
-          
-
             <li>
               <a
                 href="https://maps.app.goo.gl/7xfXpab3E2F7SC5NA?g_st=iwb"
@@ -136,7 +139,7 @@ const Footer = () => {
           <p className="copyright">
             &copy; 2024 Milane. Tous droits réservés | Conçu par
             <a
-              href="https://websolution-gules.vercel.app/"
+              href="https://www.instagram.com/danzia_2021/"
               target="_blank"
               className="link"
             >
