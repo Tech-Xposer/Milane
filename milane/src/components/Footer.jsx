@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 
 const Footer = () => {
@@ -80,32 +81,27 @@ const Footer = () => {
 
           <ul className="footer-list">
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <a href="/" className="label-2 footer-link hover-underline">
                 Home
               </a>
             </li>
 
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <button href="#" className="label-2 footer-link hover-underline">
                 Menus
-              </a>
+              </button>
             </li>
 
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                About Us
-              </a>
+              <Link href="/gallery" className="label-2 footer-link hover-underline">
+                Gallery
+              </Link>
             </li>
 
+          
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Our Chefs
-              </a>
-            </li>
-
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Contact
+              <a href="/checkout" className="label-2 footer-link hover-underline">
+              Panier
               </a>
             </li>
           </ul>
@@ -123,17 +119,7 @@ const Footer = () => {
               </a>
             </li>
 
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Twitter
-              </a>
-            </li>
-
-            <li>
-              <a href="#" className="label-2 footer-link hover-underline">
-                Youtube
-              </a>
-            </li>
+          
 
             <li>
               <a

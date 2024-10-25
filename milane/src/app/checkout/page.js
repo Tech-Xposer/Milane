@@ -37,6 +37,15 @@ const Checkout = () => {
 
   const validateEmail = (email) => /\S+@\S+\.\S+/.test(email);
 
+  const getOrderType = (type) => {
+    switch (type) {
+      case "takeaway":
+        return "À Emporter";
+      case "home-delivery":
+        return "Livraison à domicile";
+    }
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -67,7 +76,8 @@ const Checkout = () => {
           orders,
           email,
           address,
-          zipcode
+          zipcode,
+          orderType: getOrderType(orderType)
         })
       });
 
@@ -89,7 +99,7 @@ const Checkout = () => {
   };
 
   const totalPrice = orders
-    .reduce((total, order) => total + order.quantity || 1 * order.price, 0)
+    .reduce((total, order) => total + (order.quantity || 1) * order.price, 0)
     .toFixed(2);
 
   return (
@@ -121,11 +131,12 @@ const Checkout = () => {
               </thead>
               <tbody>
                 {orders.map((order, index) => (
+                  console.log(order),
                   <tr key={index} className="border-b border-[#F4BE39]">
                     <td className="p-2">{order.name}</td>
                     <td className="p-2">{order.quantity || 1}</td>
                     <td className="p-2">
-                      {(order.quantity || 1 * order.price).toFixed(2)} €
+                      {( order.price * (order.quantity || 1)).toFixed(2)} €
                     </td>
                     {order.option && (
                       <td colSpan="3" className="p-2">

@@ -5,7 +5,7 @@ import nodemailer from "nodemailer";
 export async function POST(request) {
   try {
     const body = await request.json();
-    const { name, orders, phone, email, address, zipcode } = body;
+    const { name, orders, phone, email, address, zipcode, orderType } = body;
 
     const response = await sendEmail(
       name,
@@ -13,7 +13,8 @@ export async function POST(request) {
       phone,
       email,
       address,
-      zipcode
+      zipcode,
+      orderType
     );
     return NextResponse.json({ message: "Email sent successfully!", response });
   } catch (error) {
@@ -37,41 +38,58 @@ const transporter = nodemailer.createTransport({
 });
 
 // Function to send email
-const sendEmail = async (name, orders, phone, email, address, zipcode) => {
+const sendEmail = async (
+  name,
+  orders,
+  phone,
+  email,
+  address,
+  zipcode,
+  orderType
+) => {
   console.log("Sending email to:", email); // Log the recipient's email
   try {
     const mail = await transporter.sendMail({
-      from: `"Ashutosh" <${process.env.NEXT_NODEMAILER_USERNAME}>`, // Use the actual email as the sender
+      from: `"Restaurant Milane" <${process.env.NEXT_NODEMAILER_USERNAME}>`, // Use the actual email as the sender
       to: `${process.env.NEXT_NODEMAILER_RECIPIENT}, ${email}`,
       subject: `Order from ${name}`,
       html: `
-        <h3>New Order Details</h3>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Orders:</strong></p>
-        <ul>
-          ${orders
-            .map(
-              (order) => `
-                <li>
-                  ${order.name} - Quantity: ${order.quantity}, Price: ${
-                order.price
-              } €
-                  <ul>
-                    <li>Option: ${order.option}</li>
-                  </ul>
-                  <strong>Total: ${(order.price * order.quantity).toFixed(
-                    2
-                  )} €</strong>
-                  ${
-                    address
-                      ? `<p><strong>Address:</strong> ${address}</p><p><strong>City:</strong> ${zipcode}</p>`
-                      : ""
-                  }
-                </li>`
-            )
-            .join("")}
-        </ul>
+     <h1>Thank you for your order!</h1>
+<h2>Order Type: ${orderType}</h2>
+<h3>New Order Details</h3>
+<p><strong>Name:</strong> ${name}</p>
+<p><strong>Phone:</strong> ${phone}</p>
+<p><strong>Orders:</strong></p>
+<ul>
+  ${orders
+    .map(
+      (order) => `
+        <li>
+          <p>${order.name} - Quantity: ${order.quantity || 1}, Price: ${order.price} €</p>
+          ${
+            order.option
+              ? `<ul><li>Option: ${order.option}</li></ul>`
+              : ""
+          }
+          ${
+            order.selectedItems
+              ? `<ul>${Object.entries(order.selectedItems)
+                  .map(
+                    ([key, value]) => `<li>${key}: ${value}</li>`
+                  )
+                  .join("")}</ul>`
+              : ""
+          }
+          <strong>Total: ${(order.price * (order.quantity || 1)).toFixed(
+            2
+          )} €</strong>
+        </li>`
+    )
+    .join("")}
+</ul>
+${address ? `<p><strong>Address:</strong> ${address}</p>` : ""}
+${zipcode ? `<p><strong>Zip:</strong> ${zipcode}</p>` : ""}
+
       `
     });
 

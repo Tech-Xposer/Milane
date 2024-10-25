@@ -12,7 +12,7 @@ body {
 
 header h1 {
   color: #f5f5f5;
-  margin-top: 20px;
+  margin-top: 120px;
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ header h1 {
 
 /* Gallery container */
 .gallery-container {
-  margin-top:  150px;
+  margin-top:  50px;
   margin-bottom: 100px;
   display: flex;
   justify-content: center;
@@ -92,7 +92,7 @@ header h1 {
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px; /* Reduce gap for better spacing on mobile */
+  gap: 30px; /* Reduce gap for better spacing on mobile */
   width: 100%;
   max-width: 1200px; /* Limit width to avoid stretching too wide */
 }

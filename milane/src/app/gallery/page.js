@@ -35,7 +35,7 @@ const GalleryPage = () => {
     <>
       <div className="sparkling-stars" /> {/* Moving sparkles background */}
       <header>
-        <h1>Image Gallery</h1>
+        <h1 className="text-5xl font-londrina">Galerie Milane</h1>
       </header>
       <div className="gallery-container">
         <div className="gallery">
