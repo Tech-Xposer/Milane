@@ -25,6 +25,7 @@ const Reservation = () => {
                 placeholder="Your Name"
                 autoComplete="off"
                 className="input-field"
+                required
               />
               <input
                 type="email"
@@ -32,6 +33,8 @@ const Reservation = () => {
                 placeholder="Your Email"
                 autoComplete="off"
                 className="input-field"
+                required
+
               />
               <input
                 type="tel"
@@ -39,12 +42,14 @@ const Reservation = () => {
                 placeholder="Phone Number"
                 autoComplete="off"
                 className="input-field"
+                required
+
               />
             </div>
             <div className="input-wrapper">
               <div className="icon-wrapper">
                 <ion-icon name="person-outline" aria-hidden="true" />
-                <select name="person" className="input-field">
+                <select name="person" className="input-field" required>
                   {Array.from({ length: 70 }, (_, i) => i + 1).map((i) => {
                     return (
                       <option value="1-person" key={i}>
@@ -61,12 +66,14 @@ const Reservation = () => {
                   type="date"
                   name="reservation-date"
                   className="input-field"
+                required
+
                 />
                 <ion-icon name="chevron-down" aria-hidden="true" />
               </div>
               <div className="icon-wrapper">
                 <ion-icon name="time-outline" aria-hidden="true" />
-                <select name="person" className="input-field">
+                <select name="person" className="input-field" required>
                   <option value="08:00am">08 : 00 am</option>
                   <option value="09:00am">09 : 00 am</option>
                   <option value="010:00am">10 : 00 am</option>
@@ -92,6 +99,7 @@ const Reservation = () => {
               autoComplete="off"
               className="input-field"
               defaultValue={""}
+              required
             />
             <button type="submit" className="btn btn-secondary">
               <span className="text text-1">Réservez une table</span>

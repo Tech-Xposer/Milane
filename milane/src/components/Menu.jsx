@@ -219,17 +219,21 @@ const DishCard = ({ menuItem }) => {
   );
 };
 
-const SpecialDishCard = ({ menuItem }) => {
-  const [selectedItems, setSelectedItems] = useState({}); // State to store selected items
 
-  // Retrieve initial selections from localStorage if present
+
+const SpecialDishCard = ({ menuItem }) => {
+  const [selectedItems, setSelectedItems] = useState({});
+  const [quantity, setQuantity] = useState(0);
+
+  // Retrieve initial selections and quantity from localStorage if present
   useEffect(() => {
     const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
     const existingItem = storedCartItems.find(
       (item) => item.name === menuItem.name
     );
     if (existingItem) {
-      setSelectedItems(existingItem.selectedItems || {}); // Restore selected items
+      setSelectedItems(existingItem.selectedItems || {});
+      setQuantity(existingItem.quantity || 1);
     }
   }, [menuItem.name]);
 
@@ -241,14 +245,19 @@ const SpecialDishCard = ({ menuItem }) => {
     );
 
     if (existingItemIndex > -1) {
-      // Update selected items if item exists
-      storedCartItems[existingItemIndex].selectedItems = selectedItems;
+      // Update item if it exists
+      storedCartItems[existingItemIndex] = {
+        ...storedCartItems[existingItemIndex],
+        selectedItems,
+        quantity,
+      };
     } else {
-      // Add new item to the cart
+      // Add new item to cart
       storedCartItems.push({
         name: menuItem.name,
         price: menuItem.price || 11,
-        selectedItems
+        selectedItems,
+        quantity,
       });
     }
 
@@ -258,13 +267,14 @@ const SpecialDishCard = ({ menuItem }) => {
   const handleOptionChange = (category, itemName) => {
     setSelectedItems((prev) => ({
       ...prev,
-      [category]: itemName // Update selected item for the category
+      [category]: itemName,
     }));
   };
 
-  const handleSave = () => {
+  const handleQuantityChange = (delta) => {
+    setQuantity((prevQuantity) => Math.max(1, prevQuantity + delta));
     saveCartToLocalStorage();
-    toast.success(`${menuItem.name} added to cart`);
+    toast.info(`${menuItem.name} updated in cart`);
   };
 
   return (
@@ -294,11 +304,12 @@ const SpecialDishCard = ({ menuItem }) => {
                   >
                     <input
                       type="radio"
-                      name={category} // Same name for grouping
-                      id={`item-${index}-${itemIndex}`} // Unique ID
-                      value={item.name} // Value for the option
-                      checked={selectedItems[category] === item.name} // Check if selected
-                      onChange={() => handleOptionChange(category, item.name)} // Handle change
+                      name={`${menuItem.name}-${category}`}
+                      id={`item-${index}-${itemIndex}`}
+                      value={item.name}
+                      checked={selectedItems[category] === item.name}
+                      onChange={() => handleOptionChange(category, item.name)}
+                      required
                     />
                     <label
                       htmlFor={`item-${index}-${itemIndex}`}
@@ -306,9 +317,6 @@ const SpecialDishCard = ({ menuItem }) => {
                     >
                       {item.name}
                     </label>
-                    {/* <span className="text-gray-400 text-sm ml-2">
-                      {item.description}
-                    </span> */}
                   </div>
                 ))}
               </div>
@@ -317,14 +325,27 @@ const SpecialDishCard = ({ menuItem }) => {
         </div>
       ))}
 
-      <button
-        onClick={handleSave}
-        className="bg-[#F4BE39] text-black px-4 py-2 rounded"
-      >
-        Add
-      </button>
+      {/* Quantity Controls */}
+      <div className="flex items-center gap-2 mt-4">
+        <button
+          onClick={() => handleQuantityChange(-1)}
+          className="bg-[#F4BE39] text-black px-4 py-2 rounded"
+        >
+          -
+        </button>
+        <span className="text-xl text-white font-quicksand">{quantity}</span>
+        <button
+          onClick={() => handleQuantityChange(1)}
+          className="bg-[#F4BE39] text-black px-4 py-2 rounded"
+        >
+          +
+        </button>
+      </div>
     </div>
   );
 };
+
+
+
 
 export default Menu;
