@@ -89,7 +89,7 @@ const Checkout = () => {
   };
 
   const totalPrice = orders
-    .reduce((total, order) => total + order.quantity * order.price, 0)
+    .reduce((total, order) => total + order.quantity || 1 * order.price, 0)
     .toFixed(2);
 
   return (
@@ -121,22 +121,31 @@ const Checkout = () => {
               </thead>
               <tbody>
                 {orders.map((order, index) => (
-                  <>
-                    {" "}
-                    <tr key={index} className="border-b border-[#F4BE39]">
-                      <td className="p-2">{order.name}</td>
-                      <td className="p-2">{order.quantity}</td>
-                      <td className="p-2">
-                        {(order.quantity * order.price).toFixed(2)} €
+                  <tr key={index} className="border-b border-[#F4BE39]">
+                    <td className="p-2">{order.name}</td>
+                    <td className="p-2">{order.quantity || 1}</td>
+                    <td className="p-2">
+                      {(order.quantity || 1 * order.price).toFixed(2)} €
+                    </td>
+                    {order.option && (
+                      <td colSpan="3" className="p-2">
+                        {order.option}
                       </td>
-                      {order.option && (
-                        <td colSpan="3" className="p-2">
-                          {order.option}
-                        </td>
-                      )}
-                    </tr>
-                  </>
+                    )}
+                    {order.selectedItems && (
+                      <td colSpan="3" className="p-2">
+                        <ul>
+                          {Object.keys(order.selectedItems).map((key) => (
+                            <li key={key}>
+                              {key} : {order.selectedItems[key]}
+                            </li>
+                          ))}
+                        </ul>
+                      </td>
+                    )}
+                  </tr>
                 ))}
+
                 <tr>
                   <td colSpan="2" className="text-right p-2 font-semibold">
                     Total:
@@ -147,16 +156,24 @@ const Checkout = () => {
             </table>
           </div>
           <div className="flex gap-4 items-center m-5">
-            <span
-              onClick={() => setOrderType("takeaway")}
-              className={`cursor-pointer ${
-                orderType === "takeaway"
-                  ? "bg-[#F4BE39] p-2 text-black font-londrina"
-                  : "text-white"
-              }`}
-            >
-              À Emporter
-            </span>
+            <div>
+              {" "}
+              <img
+                src={"/assets/images/discount.gif"}
+                alt="takeaway"
+                className="w-[100px] h-8"
+              />
+              <span
+                onClick={() => setOrderType("takeaway")}
+                className={`cursor-pointer relative ${
+                  orderType === "takeaway"
+                    ? "bg-[#F4BE39] p-2 text-black font-londrina"
+                    : "text-white"
+                }`}
+              >
+                À Emporter
+              </span>
+            </div>
             <span
               onClick={() => setOrderType("home-delivery")}
               className={`cursor-pointer ${

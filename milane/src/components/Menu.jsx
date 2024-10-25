@@ -1,6 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
-import menu from "../app/data/menu.js";
+import menu from "@/data/menu.js";
+import { specialMenu } from "@/data/menu.js";
 import { useRouter } from "next/navigation.js";
 import { toast } from "react-toastify";
 
@@ -92,6 +93,15 @@ const Menu = ({ toggleMenu }) => {
                 </div>
               </div>
             ))}
+
+          {specialMenu &&
+            specialMenu.map((menuItem, index) => (
+              <SpecialDishCard
+                key={index}
+                menuItem={menuItem}
+                addToCart={addToCart} // Pass addToCart here
+              />
+            ))}
         </div>
 
         <button
@@ -176,7 +186,7 @@ const DishCard = ({ menuItem }) => {
 
   return (
     <div className="flex gap-5 overflow-auto p-5 w-full items-center">
-      <div className="flex flex-col items-start gap-3">
+      <div className="flex flex-col items-start gap-1">
         <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
           {menuItem.name}
         </span>
@@ -186,33 +196,6 @@ const DishCard = ({ menuItem }) => {
         <span className="font-quicksand text-2xl text-white">
           {menuItem.price} €
         </span>
-
-        {/* Display choice options if available */}
-        <div className="flex gap-5 items-center flex-col">
-          <span className="text-2xl text-[#F4BE39] font-quicksand">
-            Choose any one
-          </span>
-          {menuItem.options &&
-            menuItem.options.map((option, index) => (
-              <div key={index} className="flex gap-1 items-center">
-                <input
-                  type="radio"
-                  name="menuOption" // Same name for grouping
-                  id={`option-${index}`} // Unique ID
-                  value={option.name} // Value for the option
-                  checked={selectedOption === option.name} // Check if selected
-                  onChange={() => handleOptionChange(option.name)} // Handle change
-
-                />
-                <label
-                  htmlFor={`option-${index}`}
-                  className="text-2xl text-white font-quicksand"
-                >
-                  {option.name}
-                </label>
-              </div>
-            ))}
-        </div>
 
         <div className="flex gap-10 items-center">
           <div className="flex gap-5 items-center">
@@ -232,6 +215,114 @@ const DishCard = ({ menuItem }) => {
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+const SpecialDishCard = ({ menuItem }) => {
+  const [selectedItems, setSelectedItems] = useState({}); // State to store selected items
+
+  // Retrieve initial selections from localStorage if present
+  useEffect(() => {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const existingItem = storedCartItems.find(
+      (item) => item.name === menuItem.name
+    );
+    if (existingItem) {
+      setSelectedItems(existingItem.selectedItems || {}); // Restore selected items
+    }
+  }, [menuItem.name]);
+
+  // Save the cart items to localStorage
+  const saveCartToLocalStorage = () => {
+    const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+    const existingItemIndex = storedCartItems.findIndex(
+      (item) => item.name === menuItem.name
+    );
+
+    if (existingItemIndex > -1) {
+      // Update selected items if item exists
+      storedCartItems[existingItemIndex].selectedItems = selectedItems;
+    } else {
+      // Add new item to the cart
+      storedCartItems.push({
+        name: menuItem.name,
+        price: menuItem.price || 11,
+        selectedItems
+      });
+    }
+
+    localStorage.setItem("cartItems", JSON.stringify(storedCartItems));
+  };
+
+  const handleOptionChange = (category, itemName) => {
+    setSelectedItems((prev) => ({
+      ...prev,
+      [category]: itemName // Update selected item for the category
+    }));
+  };
+
+  const handleSave = () => {
+    saveCartToLocalStorage();
+    toast.success(`${menuItem.name} added to cart`);
+  };
+
+  return (
+    <div className="flex flex-col items-start gap-1">
+      <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
+        {menuItem.name}
+      </span>
+      <p className="font-quicksand text-xl text-white mb-4">
+        {menuItem.description}
+      </p>
+      <span className="font-quicksand text-2xl text-white">
+        {menuItem.price} €
+      </span>
+
+      {menuItem.items.map((itemGroup, index) => (
+        <div key={index} className="my-4">
+          {Object.entries(itemGroup).map(([category, items]) => (
+            <div key={category} className="mb-4">
+              <span className="text-2xl text-[#F4BE39] font-quicksand">
+                Choose one from {category}
+              </span>
+              <div className="flex flex-col items-start w-full my-3">
+                {items.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className="flex items-center space-x-2 p-2"
+                  >
+                    <input
+                      type="radio"
+                      name={category} // Same name for grouping
+                      id={`item-${index}-${itemIndex}`} // Unique ID
+                      value={item.name} // Value for the option
+                      checked={selectedItems[category] === item.name} // Check if selected
+                      onChange={() => handleOptionChange(category, item.name)} // Handle change
+                    />
+                    <label
+                      htmlFor={`item-${index}-${itemIndex}`}
+                      className="lg:text-lg text-white font-quicksand whitespace-nowrap cursor-pointer"
+                    >
+                      {item.name}
+                    </label>
+                    {/* <span className="text-gray-400 text-sm ml-2">
+                      {item.description}
+                    </span> */}
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      ))}
+
+      <button
+        onClick={handleSave}
+        className="bg-[#F4BE39] text-black px-4 py-2 rounded"
+      >
+        Add
+      </button>
     </div>
   );
 };

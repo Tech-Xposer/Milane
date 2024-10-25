@@ -291,18 +291,19 @@ const menu = [
         price: 3.5
       }
     ]
-  },
+  }
+];
+export default menu;
+
+export const specialMenu = [
   {
-    category: "Plats",
+    name: "MENU EXPRESS 11,00",
     description:
       "(Sauf dimanche et jours fériés). Tous ces plats sont servis avecune galette maison (nan ou panner nan) et du riz basmati.",
+    price: 11.00,
     items: [
       {
-        name: "MENU EXPRESS",
-        description:
-          "Poulet mariné et grillé aux herbesfraîches, cuit au tandoor",
-        price: 11,
-        options: [
+        PLATS: [
           {
             name: "Chicken Tandoori",
             description:
@@ -322,9 +323,144 @@ const menu = [
             description:
               "2 Boules au choix Noix de coco, fruits de lapassion, mangue, citron, fraise, vanille ouchocolat"
           }
+        ],
+        DESSERT: [
+          {
+            name: "HALWA",
+            description:
+              "Gâteau de semoule : sucre, beurre,lait, amandes, cardamone, noix de"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: "MENU 19,00",
+    description:
+      "Toutes nos entrées sont servies avec une de nosgalettes maison (nan ou nan fromage)",
+    price: 19.00,
+    items: [
+      {
+        ENTRÉES: [
+          {
+            name: "RESHMI KABAB",
+            description:
+              "Blanc de poulet haché, coriandre, présenté sous forme de saucisses grillées"
+          },
+          {
+            name: "SAMOSA VEGETABLE",
+            description: "Chausson delegtumes"
+          },
+          {
+            name: "PYAJ PKADRA",
+            description: "Oignon servi en lamelles"
+          },
+          {
+            name: "RAITA",
+            description: "Yaourt aux crudités et épices"
+          }
+        ],
+        Plats: [
+          {
+            name: "CHICKEN CURRY",
+            description: "Poulet au curry, herbes et,epices"
+          },
+          {
+            name: "FISH CURRY",
+            description: "Fllets de poisson au curry, herbes etépices"
+          },
+          {
+            name: "VEGETABLE CURRY",
+            description: "Variété de légumes au curry"
+          },
+          {
+            name: "DALL MAKHNI",
+            description: "Lentilles au curry et beurre"
+          }
+        ],
+        Desset: [
+          {
+            name: "HALWA ",
+            description:
+              " Gâteau de semoule : sucre, beurre,lait, amandes, cardamone, noix de coco "
+          },
+          {
+            name: "MANGO ICE CREAM ",
+            description:
+              " Boule de glace à la vanille et coulisde mangue fraîche "
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: "MENU 22,00",
+    description:
+      "Tous nos plats sont servis avec une de nosgalettes maison (nan ou nan fromage)",
+    price: 22.00,
+    items: [
+      {
+        ENTRÉES: [
+          {
+            name: "PRAWNS CHAT ",
+            description:
+              " Crevettes macérées dan ils de citron vert,garies une salade composée (tomate,concombre, pommes) et herbes fraiches "
+          },
+          {
+            name: "CHICKEN TANDOORI ",
+            description: " Poulet mariné grilé cuit au tandor etherbes fraiche "
+          },
+          {
+            name: "SAMOSA DE VIANDE ",
+            description: " Chausson de viande d agneau hachéeavec petts pois "
+          },
+          {
+            name: "BAIGAN BHARTA ",
+            description:
+              " Aubergines grillée au tandor, réparéesavec tomate, oignons et crème fraîche "
+          }
+        ],
+        Plats: [
+          {
+            name: "CHICKEN BADAMI ",
+            description:
+              "Morceaux de poulet accammodés à lacrème fraîche et de noix de cajou. amandes, all, gingembre et herbes indienne "
+          },
+          {
+            name: "ROGAN JOSH ",
+            description:
+              " Agneau au cury assaisonné d'une sauceriche en épices et herbes indienne "
+          },
+
+          {
+            name: "FISH BANGALI(SELON ARRIVAGE) ",
+            description:
+              "Poisson au curry avec piments verts,oignon, coriandre, farine de pois chicheet jus de citron vert "
+          },
+          {
+            name: "VEGETABLE KORMA ",
+            description:
+              "Variété de légumes, de noix de cajou, raisinssecs, crème fraîche, amandes, ail, gingembre "
+          }
+        ],
+        Desset: [
+          {
+            name: "HALWA ",
+            description:
+              "Gâteau de semoule : sucre, beurre,lait, amandes, cardamone, noix deCOCO "
+          },
+          {
+            name: "GULAB JAMUN ",
+            description: "Boule préparée à base de lait parfumé à la rose "
+          },
+
+          {
+            name: "MANGO ICE CREAM ",
+            description:
+              "Boule de glaco à la vanille aveccoulis de mangue fraîche "
+          }
         ]
       }
     ]
   }
 ];
-export default menu;

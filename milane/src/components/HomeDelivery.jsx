@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import menu from "../app/data/menu.js";
+import menu from "../data/menu.js";
 import { useRouter } from "next/navigation.js";
 import { toast } from "react-toastify";
 
