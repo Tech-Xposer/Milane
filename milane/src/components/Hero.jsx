@@ -5,6 +5,12 @@ const Hero = ({ toggleMenu }) => {
   const [currentSlidePos, setCurrentSlidePos] = useState(0);
   const heroSliderItems = [
     {
+      subtitle: "Culture indienne enrichie",
+      title: "Une expérience culinaire\nau cœur des traditions",
+      text: "Plongez dans la richesse des saveurs indiennes, où chaque plat raconte une histoire de culture et d'héritage.",
+      imgSrc: "/assets/images/hero-slider-15.png"
+    },
+    {
       subtitle: "Un festin épicé",
       title: "Un goût authentique de\nBiryani au poulet",
       text: "Savourez chaque bouchée de notre Biryani, une explosion de saveurs exquises qui éveilleront vos sens.",
@@ -22,12 +28,7 @@ const Hero = ({ toggleMenu }) => {
       text: "Nous prenons soin de nos clients comme de notre propre famille, avec chaque bouchée de Dosa croustillant et savoureux.",
       imgSrc: "/assets/images/hero-slider-13.jpg"
     },
-    {
-      subtitle: "Culture indienne enrichie",
-      title: "Une expérience culinaire\nau cœur des traditions",
-      text: "Plongez dans la richesse des saveurs indiennes, où chaque plat raconte une histoire de culture et d'héritage.",
-      imgSrc: "/assets/images/hero-slider-15.png"
-    },
+
     {
       subtitle: "Croustillant et épicé",
       title: "L'irrésistible\nSamosa traditionnel",
