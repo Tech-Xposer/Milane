@@ -54,7 +54,7 @@ const Menu = ({ toggleMenu }) => {
 
   return (
     <div className="backdrop-blur-md inset-0 fixed z-10 bg-black/20">
-      <div className="flex flex-col justify-center items-center h-screen w-screen p-10 md:p-20 gap-10">
+      <div className="flex flex-col justify-center items-center h-screen w-full p-10 md:p-20 gap-10">
         <div className="flex justify-around h-auto items-center w-full">
           <h1 className="text-8xl text-[#F4BE39] font-londrina text-center">
             Menu
@@ -286,30 +286,49 @@ const SpecialDishCard = ({ menuItem }) => {
       </span>
 
       {menuItem.items.map((itemGroup, index) => (
-        <div key={index} className="my-4">
+        <div key={index} className="my-4 w-full">
           {Object.entries(itemGroup).map(([category, items]) => (
             <div key={category} className="mb-4">
-              <span className="text-xl md:text-2xl text-[#F4BE39] font-quicksand">
+              <span className="text-lg md:text-2xl text-[#F4BE39] font-quicksand">
                 Choose one from {category}
               </span>
-              <div className="flex flex-col items-start w-full my-3">
+              <div className="flex flex-col items-start my-3  p-4 ">
                 {items.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className="flex items-center space-x-2 p-2 text-lg"
-                  >
+                  // <label
+                  //   key={itemIndex}
+                  //   htmlFor={`item-${index}-${itemIndex}`}
+                  //   className="flex items-center gap-2 py-2 w-full cursor-pointer  justify-center "
+                  // >
+                  //   <input
+                  //     type="radio"
+                  //     name={`${menuItem.name}-${category}`}
+                  //     id={`item-${index}-${itemIndex}`}
+                  //     value={item.name}
+                  //     checked={selectedItems[category] === item.name}
+                  //     onChange={() => handleOptionChange(category, item.name)}
+                  //     required
+                  //     className="mr-2"
+                  //   />
+                  //   <span className="text-sm md:text-lg text-white font-quicksand whitespace-nowrap">
+                  //     {item.name}
+                  //   </span>
+                  // </label>
+                  <div class="flex items-center mb-4">
                     <input
+                      id="default-radio-1"
                       type="radio"
                       name={`${menuItem.name}-${category}`}
-                      id={`item-${index}-${itemIndex}`}
-                      value={item.name}
                       checked={selectedItems[category] === item.name}
-                      onChange={() => handleOptionChange(category, item.name)}
+                      value={item.name}
                       required
+                      onChange={() => handleOptionChange(category, item.name)}
+                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
                     />
                     <label
+                      for="default-radio-1"
+                      key={itemIndex}
                       htmlFor={`item-${index}-${itemIndex}`}
-                      className="lg:text-lg text-white font-quicksand whitespace-nowrap cursor-pointer"
+                      class="ms-2 font-medium text-white text-xl md:text-2xl font-quicksand"
                     >
                       {item.name}
                     </label>
