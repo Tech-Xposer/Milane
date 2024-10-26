@@ -313,7 +313,7 @@ const SpecialDishCard = ({ menuItem }) => {
                   //     {item.name}
                   //   </span>
                   // </label>
-                  <div class="flex items-center mb-4">
+                  <div class="flex items-center mb-4" key={itemIndex}>
                     <input
                       id="default-radio-1"
                       type="radio"
