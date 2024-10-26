@@ -27,7 +27,7 @@ const Testinomials = () => {
             alt="Sam Jhonson"
             className="img"
           />
-          <p className="label-2 profile-name">Ashutosh Sharma</p>
+          <p className="label-2 profile-name">Léo</p>
         </div>
       </div>
     </section>
