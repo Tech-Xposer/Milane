@@ -54,7 +54,7 @@ const Menu = ({ toggleMenu }) => {
 
   return (
     <div className="backdrop-blur-md inset-0 fixed z-10 bg-black/20">
-      <div className="flex flex-col justify-center items-center h-screen w-screen p-20 gap-10">
+      <div className="flex flex-col justify-center items-center h-screen w-screen p-10 md:p-20 gap-10">
         <div className="flex justify-around h-auto items-center w-full">
           <h1 className="text-8xl text-[#F4BE39] font-londrina text-center">
             Menu
@@ -71,7 +71,7 @@ const Menu = ({ toggleMenu }) => {
           {menu &&
             menu.map((categoryItem, index) => (
               <div key={index} className="flex flex-col space-y-8">
-                <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
+                <span className="test2xl md:text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
                   {categoryItem.category}
                 </span>
                 <p className="font-quicksand text-xl text-white mb-4">
@@ -187,7 +187,7 @@ const DishCard = ({ menuItem }) => {
   return (
     <div className="flex gap-5 overflow-auto p-5 w-full items-center">
       <div className="flex flex-col items-start gap-1">
-        <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
+        <span className="text-2xl md:text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
           {menuItem.name}
         </span>
         <p className="font-quicksand text-xl text-white mb-4">
@@ -197,29 +197,25 @@ const DishCard = ({ menuItem }) => {
           {menuItem.price} €
         </span>
 
-        <div className="flex gap-10 items-center">
-          <div className="flex gap-5 items-center">
-            <button
-              onClick={handleQuantityDecrement}
-              className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
-            >
-              -
-            </button>
-            <p className="text-2xl text-white font-quicksand">{itemQuantity}</p>
-            <button
-              onClick={handleQuantityIncrement}
-              className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
-            >
-              +
-            </button>
-          </div>
+        <div className="flex gap-5 items-center mt-2">
+          <button
+            onClick={handleQuantityDecrement}
+            className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
+          >
+            -
+          </button>
+          <p className="text-2xl text-white font-quicksand">{itemQuantity}</p>
+          <button
+            onClick={handleQuantityIncrement}
+            className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
+          >
+            +
+          </button>
         </div>
       </div>
     </div>
   );
 };
-
-
 
 const SpecialDishCard = ({ menuItem }) => {
   const [selectedItems, setSelectedItems] = useState({});
@@ -249,7 +245,7 @@ const SpecialDishCard = ({ menuItem }) => {
       storedCartItems[existingItemIndex] = {
         ...storedCartItems[existingItemIndex],
         selectedItems,
-        quantity,
+        quantity
       };
     } else {
       // Add new item to cart
@@ -257,7 +253,7 @@ const SpecialDishCard = ({ menuItem }) => {
         name: menuItem.name,
         price: menuItem.price || 11,
         selectedItems,
-        quantity,
+        quantity
       });
     }
 
@@ -267,7 +263,7 @@ const SpecialDishCard = ({ menuItem }) => {
   const handleOptionChange = (category, itemName) => {
     setSelectedItems((prev) => ({
       ...prev,
-      [category]: itemName,
+      [category]: itemName
     }));
   };
 
@@ -279,7 +275,7 @@ const SpecialDishCard = ({ menuItem }) => {
 
   return (
     <div className="flex flex-col items-start gap-1">
-      <span className="text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
+      <span className="text-2xl md:text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
         {menuItem.name}
       </span>
       <p className="font-quicksand text-xl text-white mb-4">
@@ -293,14 +289,14 @@ const SpecialDishCard = ({ menuItem }) => {
         <div key={index} className="my-4">
           {Object.entries(itemGroup).map(([category, items]) => (
             <div key={category} className="mb-4">
-              <span className="text-2xl text-[#F4BE39] font-quicksand">
+              <span className="text-xl md:text-2xl text-[#F4BE39] font-quicksand">
                 Choose one from {category}
               </span>
               <div className="flex flex-col items-start w-full my-3">
                 {items.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="flex items-center space-x-2 p-2"
+                    className="flex items-center space-x-2 p-2 text-lg"
                   >
                     <input
                       type="radio"
@@ -326,17 +322,17 @@ const SpecialDishCard = ({ menuItem }) => {
       ))}
 
       {/* Quantity Controls */}
-      <div className="flex items-center gap-2 mt-4">
+      <div className="flex items-center gap-5 mt-2">
         <button
           onClick={() => handleQuantityChange(-1)}
-          className="bg-[#F4BE39] text-black px-4 py-2 rounded"
+          className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
         >
           -
         </button>
         <span className="text-xl text-white font-quicksand">{quantity}</span>
         <button
           onClick={() => handleQuantityChange(1)}
-          className="bg-[#F4BE39] text-black px-4 py-2 rounded"
+          className="bg-[#E4C590] text-black font-bold font-quicksand px-5 mt-auto hover:bg-[#e1b15f] transition duration-200"
         >
           +
         </button>
@@ -344,8 +340,5 @@ const SpecialDishCard = ({ menuItem }) => {
     </div>
   );
 };
-
-
-
 
 export default Menu;

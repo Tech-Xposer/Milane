@@ -25,8 +25,9 @@ export default function ClientLayout({ children }) {
       >
         <ion-icon name="chevron-up" aria-hidden="true"></ion-icon>
       </a>
-      {menuOpen && <Menu toggleMenu={toggleMenu} />} {/* Display the Menu based on context */}
-      <ToastContainer />
+      {menuOpen && <Menu toggleMenu={toggleMenu} />}{" "}
+      {/* Display the Menu based on context */}
+      <ToastContainer autoClose={500} />
       <Script
         type="module"
         src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
