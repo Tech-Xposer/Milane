@@ -121,7 +121,7 @@ const Services = ({ toggleMenu }) => {
         </ul>
 
         <img
-          src="./assets/images/shape-1.png"
+          src="/assets/images/shape-1.png"
           width="246"
           height="412"
           loading="lazy"
@@ -129,7 +129,7 @@ const Services = ({ toggleMenu }) => {
           className="shape shape-1 move-anim"
         />
         <img
-          src="./assets/images/shape-2.png"
+          src="/assets/images/shape-2.png"
           width="343"
           height="345"
           loading="lazy"

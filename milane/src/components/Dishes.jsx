@@ -5,7 +5,7 @@ const Dishes = ({toggleMenu}) => {
     <section className="special-dish text-center" aria-labelledby="dish-label">
   <div className="special-dish-banner">
     <img
-      src="./assets/images/special-dish-banner.jpg"
+      src="/assets/images/special-dish-banner.jpg"
       width={940}
       height={900}
       loading="lazy"
@@ -16,7 +16,7 @@ const Dishes = ({toggleMenu}) => {
   <div className="special-dish-content bg-black-10">
     <div className="container">
       <img
-        src="./assets/images/badge-1.png"
+        src="/assets/images/badge-1.png"
         width={28}
         height={41}
         loading="lazy"
@@ -45,7 +45,7 @@ const Dishes = ({toggleMenu}) => {
     </div>
   </div>
   <img
-    src="./assets/images/shape-4.png"
+    src="/assets/images/shape-4.png"
     width={179}
     height={359}
     loading="lazy"
@@ -53,7 +53,7 @@ const Dishes = ({toggleMenu}) => {
     className="shape shape-1"
   />
   <img
-    src="./assets/images/shape-9.png"
+    src="/assets/images/shape-9.png"
     width={351}
     height={462}
     loading="lazy"

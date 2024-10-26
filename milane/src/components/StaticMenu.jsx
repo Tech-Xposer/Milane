@@ -17,7 +17,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-1.jpg"
+                  src="/assets/images/menu-1.jpg"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -52,7 +52,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-2.jpg"
+                  src="/assets/images/menu-2.jpg"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -86,7 +86,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/butter-chicken.png"
+                  src="/assets/images/butter-chicken.png"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -121,7 +121,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-6.jpg"
+                  src="/assets/images/menu-6.jpg"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -158,7 +158,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/cheese-naan.png"
+                  src="/assets/images/cheese-naan.png"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -193,7 +193,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 style={{ width: 100, height: 100 }}
               >
                 <img
-                  src="./assets/images/menu-4.png"
+                  src="/assets/images/menu-4.png"
                   width="100"
                   height="100"
                   loading="lazy"
@@ -238,7 +238,7 @@ const StaticMenu = ({ toggleMenu }) => {
         </button>
 
         <img
-          src="./assets/images/shape-5.png"
+          src="/assets/images/shape-5.png"
           width="921"
           height="1036"
           loading="lazy"
@@ -246,7 +246,7 @@ const StaticMenu = ({ toggleMenu }) => {
           className="shape shape-2 move-anim"
         />
         <img
-          src="./assets/images/shape-6.png"
+          src="/assets/images/shape-6.png"
           width="343"
           height="345"
           loading="lazy"

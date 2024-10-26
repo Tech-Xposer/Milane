@@ -20,7 +20,7 @@ const Testinomials = () => {
         </div>
         <div className="profile">
           <img
-            src="./assets/images/testi-avatar.jpg"
+            src="/assets/images/Ashutosh.jpg"
             width={100}
             height={100}
             loading="lazy"

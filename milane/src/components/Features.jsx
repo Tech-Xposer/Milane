@@ -11,7 +11,7 @@ const Features = () => {
             <div className="feature-card">
               <div className="card-icon">
                 <img
-                  src="./assets/images/features-icon-1.png"
+                  src="/assets/images/features-icon-1.png"
                   width={100}
                   height={80}
                   loading="lazy"
@@ -28,7 +28,7 @@ const Features = () => {
             <div className="feature-card">
               <div className="card-icon">
                 <img
-                  src="./assets/images/features-icon-2.png"
+                  src="/assets/images/features-icon-2.png"
                   width={100}
                   height={80}
                   loading="lazy"
@@ -46,7 +46,7 @@ const Features = () => {
             <div className="feature-card">
               <div className="card-icon">
                 <img
-                  src="./assets/images/features-icon-3.png"
+                  src="/assets/images/features-icon-3.png"
                   width={100}
                   height={80}
                   loading="lazy"
@@ -63,7 +63,7 @@ const Features = () => {
             <div className="feature-card">
               <div className="card-icon">
                 <img
-                  src="./assets/images/features-icon-4.png"
+                  src="/assets/images/features-icon-4.png"
                   width={100}
                   height={80}
                   loading="lazy"
@@ -78,7 +78,7 @@ const Features = () => {
           </li>
         </ul>
         <img
-          src="./assets/images/shape-7.png"
+          src="/assets/images/shape-7.png"
           width={208}
           height={178}
           loading="lazy"
@@ -86,7 +86,7 @@ const Features = () => {
           className="shape shape-1"
         />
         <img
-          src="./assets/images/shape-8.png"
+          src="/assets/images/shape-8.png"
           width={120}
           height={115}
           loading="lazy"

@@ -39,7 +39,7 @@ const About = () => {
         </div>
         <figure className="about-banner">
           <img
-            src="./assets/images/about-banner.jpg"
+            src="/assets/images/about-banner.jpg"
             width={570}
             height={570}
             loading="lazy"
@@ -54,7 +54,7 @@ const About = () => {
             data-parallax-speed="1.75"
           >
             <img
-              src="./assets/images/about-abs-image-1.png"
+              src="/assets/images/about-abs-image-1.png"
               width={285}
               height={285}
               loading="lazy"
@@ -64,7 +64,7 @@ const About = () => {
           </div>
           <div className="abs-img abs-img-2 has-before">
             <img
-              src="./assets/images/badge-2.png"
+              src="/assets/images/badge-2.png"
               width={133}
               height={134}
               loading="lazy"
@@ -73,7 +73,7 @@ const About = () => {
           </div>
         </figure>
         <img
-          src="./assets/images/shape-3.png"
+          src="/assets/images/shape-3.png"
           width={197}
           height={194}
           loading="lazy"

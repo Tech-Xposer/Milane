@@ -5,14 +5,14 @@ const Footer = () => {
   return (
     <footer
       className="footer section has-bg-image text-center"
-      style={{ backgroundImage: `url("../assets/images/footer-bg.jpg")` }}
+      style={{ backgroundImage: `url("/assets/images/footer-bg.jpg")` }}
     >
       <div className="container">
         <div className="footer-top grid-list">
           <div className="footer-brand has-before has-after">
             <a href="#" className="logo">
               <img
-                src="./assets/images/logo.svg"
+                src="/assets/images/logo.svg"
                 width="160"
                 height="50"
                 loading="lazy"
@@ -107,6 +107,14 @@ const Footer = () => {
                 className="label-2 footer-link hover-underline"
               >
                 Panier
+              </a>
+            </li>
+            <li>
+              <a
+                href="/about"
+                className="label-2 footer-link hover-underline"
+              >
+                À propos de nous
               </a>
             </li>
           </ul>

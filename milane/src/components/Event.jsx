@@ -72,7 +72,7 @@ const Event = () => {
                 style={{ width: 350, height: 450 }}
               >
                 <img
-                  src="./assets/images/Untitled design (1).png"
+                  src="/assets/images/Untitled design (1).png"
                   width={350}
                   height={450}
                   loading="lazy"

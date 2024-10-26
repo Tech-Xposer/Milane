@@ -111,7 +111,7 @@ const Reservation = () => {
           <div
             className="form-right text-center"
             style={{
-              backgroundImage: 'url("./assets/images/form-pattern.png")'
+              backgroundImage: 'url("/assets/images/form-pattern.png")'
             }}
           >
             <h2 className="headline-1 text-center">Contact Us</h2>
