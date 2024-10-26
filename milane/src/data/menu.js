@@ -297,10 +297,16 @@ export default menu;
 
 export const specialMenu = [
   {
+    name: "MENU ENFANT 10,00",
+    description:
+      "Salade + Poulet grillé + Riz + Allo Pakora +Nan fromage + GLACE",
+    price: 10.0,
+  },
+  {
     name: "MENU EXPRESS 11,00",
     description:
       "(Sauf dimanche et jours fériés). Tous ces plats sont servis avecune galette maison (nan ou panner nan) et du riz basmati.",
-    price: 11.00,
+    price: 11.0,
     items: [
       {
         PLATS: [
@@ -338,7 +344,7 @@ export const specialMenu = [
     name: "MENU 19,00",
     description:
       "Toutes nos entrées sont servies avec une de nosgalettes maison (nan ou nan fromage)",
-    price: 19.00,
+    price: 19.0,
     items: [
       {
         ENTRÉES: [
@@ -397,7 +403,7 @@ export const specialMenu = [
     name: "MENU 22,00",
     description:
       "Tous nos plats sont servis avec une de nosgalettes maison (nan ou nan fromage)",
-    price: 22.00,
+    price: 22.0,
     items: [
       {
         ENTRÉES: [

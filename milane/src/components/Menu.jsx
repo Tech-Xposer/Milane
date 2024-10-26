@@ -4,11 +4,10 @@ import menu from "@/data/menu.js";
 import { specialMenu } from "@/data/menu.js";
 import { useRouter } from "next/navigation.js";
 import { toast } from "react-toastify";
+import CheckoutButton from "./CheckoutButton";
 
 const Menu = ({ toggleMenu }) => {
   const [cartItems, setCartItems] = useState([]);
-
-  const router = useRouter();
 
   // Load cart items from localStorage when the component mounts
   useEffect(() => {
@@ -103,16 +102,6 @@ const Menu = ({ toggleMenu }) => {
               />
             ))}
         </div>
-
-        <button
-          className="text-[#F4BE39] font-quicksand border-2 border-[#F4BE39] px-2 py-1 border-solid rounded-md hover:bg-[#F4BE39] hover:text-white transition duration-200"
-          onClick={() => {
-            toggleMenu();
-            router.push("/checkout");
-          }}
-        >
-          Checkout
-        </button>
       </div>
     </div>
   );
@@ -213,6 +202,7 @@ const DishCard = ({ menuItem }) => {
           </button>
         </div>
       </div>
+      <CheckoutButton />
     </div>
   );
 };
@@ -285,60 +275,42 @@ const SpecialDishCard = ({ menuItem }) => {
         {menuItem.price} €
       </span>
 
-      {menuItem.items.map((itemGroup, index) => (
-        <div key={index} className="my-4 w-full">
-          {Object.entries(itemGroup).map(([category, items]) => (
-            <div key={category} className="mb-4">
-              <span className="text-lg md:text-2xl text-[#F4BE39] font-quicksand">
-                Choose one from {category}
-              </span>
-              <div className="flex flex-col items-start my-3  p-4 ">
-                {items.map((item, itemIndex) => (
-                  // <label
-                  //   key={itemIndex}
-                  //   htmlFor={`item-${index}-${itemIndex}`}
-                  //   className="flex items-center gap-2 py-2 w-full cursor-pointer  justify-center "
-                  // >
-                  //   <input
-                  //     type="radio"
-                  //     name={`${menuItem.name}-${category}`}
-                  //     id={`item-${index}-${itemIndex}`}
-                  //     value={item.name}
-                  //     checked={selectedItems[category] === item.name}
-                  //     onChange={() => handleOptionChange(category, item.name)}
-                  //     required
-                  //     className="mr-2"
-                  //   />
-                  //   <span className="text-sm md:text-lg text-white font-quicksand whitespace-nowrap">
-                  //     {item.name}
-                  //   </span>
-                  // </label>
-                  <div class="flex items-center mb-4" key={itemIndex}>
-                    <input
-                      id="default-radio-1"
-                      type="radio"
-                      name={`${menuItem.name}-${category}`}
-                      checked={selectedItems[category] === item.name}
-                      value={item.name}
-                      required
-                      onChange={() => handleOptionChange(category, item.name)}
-                      class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-                    />
-                    <label
-                      for="default-radio-1"
-                      key={itemIndex}
-                      htmlFor={`item-${index}-${itemIndex}`}
-                      class="ms-2 font-medium text-white text-xl md:text-2xl font-quicksand"
-                    >
-                      {item.name}
-                    </label>
-                  </div>
-                ))}
+      {menuItem.items &&
+        menuItem.items.map((itemGroup, index) => (
+          <div key={index} className="my-4 w-full">
+            {Object.entries(itemGroup).map(([category, items]) => (
+              <div key={category} className="mb-4">
+                <span className="text-lg md:text-2xl text-[#F4BE39] font-quicksand">
+                  Choisissez-en un parmi {category}
+                </span>
+                <div className="flex flex-col items-start my-3  p-4 ">
+                  {items.map((item, itemIndex) => (
+                    <div class="flex items-center mb-4" key={itemIndex}>
+                      <input
+                        id="default-radio-1"
+                        type="radio"
+                        name={`${menuItem.name}-${category}`}
+                        checked={selectedItems[category] === item.name}
+                        value={item.name}
+                        required
+                        onChange={() => handleOptionChange(category, item.name)}
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                      />
+                      <label
+                        for="default-radio-1"
+                        key={itemIndex}
+                        htmlFor={`item-${index}-${itemIndex}`}
+                        class="ms-2 font-medium text-white text-xl md:text-2xl font-quicksand"
+                      >
+                        {item.name}
+                      </label>
+                    </div>
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      ))}
+            ))}
+          </div>
+        ))}
 
       {/* Quantity Controls */}
       <div className="flex items-center gap-5 mt-2">

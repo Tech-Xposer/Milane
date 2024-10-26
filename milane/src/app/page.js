@@ -11,27 +11,29 @@ import Event from "@/components/Event";
 import { useState } from "react";
 import Menu from "@/components/Menu";
 import Features from "@/components/Features";
+import { useMenu } from "@/contexts/MenuContext";
 
 export default function Home() {
-  const [menuOpen, setMenuOpen] = useState(false);
-  const handleToggleMenu = () => {
-    document.body.style.overflowY = menuOpen ? "auto" : "hidden";
-    setMenuOpen(!menuOpen);
-  };
+  const { menuOpen, toggleMenu } = useMenu();
+  // const [menuOpen, setMenuOpen] = useState(false);
+  // const handleToggleMenu = () => {
+  //   document.body.style.overflowY = menuOpen ? "auto" : "hidden";
+  //   setMenuOpen(!menuOpen);
+  // };
   return (
     <main>
       <article>
-        <Hero toggleMenu={handleToggleMenu} />
-        <Services toggleMenu={handleToggleMenu} />
+        <Hero toggleMenu={toggleMenu} />
+        <Services toggleMenu={toggleMenu} />
         <About />
-        <Dishes toggleMenu={handleToggleMenu} />
-        <StaticMenu toggleMenu={handleToggleMenu} />
+        <Dishes toggleMenu={toggleMenu} />
+        <StaticMenu toggleMenu={toggleMenu} />
         <Testinomials />
         <Reservation />
         <Features />
         <Event />
       </article>
-      {menuOpen && <Menu toggleMenu={handleToggleMenu} />}
+      {menuOpen && <Menu toggleMenu={toggleMenu} />}
     </main>
   );
 }

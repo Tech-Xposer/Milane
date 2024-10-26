@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import React, { useState, useEffect } from "react";
 
 const Hero = ({ toggleMenu }) => {
@@ -66,7 +67,7 @@ const Hero = ({ toggleMenu }) => {
             data-hero-slider-item=""
           >
             <div className="slider-bg">
-              <img
+              <Image
                 src={item.imgSrc}
                 width={1880}
                 height={950}
@@ -114,7 +115,7 @@ const Hero = ({ toggleMenu }) => {
         <ion-icon name="chevron-forward" />
       </button>
       <a href="#reservation" className="hero-btn has-after">
-        <img
+        <Image
           src="/assets/images/hero-icon.png"
           width={48}
           height={48}
