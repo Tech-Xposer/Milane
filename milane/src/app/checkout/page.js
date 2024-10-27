@@ -176,9 +176,9 @@ const Checkout = () => {
               />
               <span
                 onClick={() => setOrderType("takeaway")}
-                className={`cursor-pointer relative ${
+                className={`cursor-pointer relative font-londrina ${
                   orderType === "takeaway"
-                    ? "bg-[#F4BE39] p-2 text-black font-londrina"
+                    ? "bg-[#F4BE39] p-2 text-black "
                     : "text-white"
                 }`}
               >
@@ -187,9 +187,9 @@ const Checkout = () => {
             </div>
             <span
               onClick={() => setOrderType("home-delivery")}
-              className={`cursor-pointer ${
+              className={`cursor-pointer font-londrina ${
                 orderType === "home-delivery"
-                  ? "bg-[#F4BE39] p-2 text-black font-londrina"
+                  ? "bg-[#F4BE39] p-2 text-black "
                   : "text-white"
               }`}
             >
