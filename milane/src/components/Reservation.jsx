@@ -128,12 +128,12 @@ const Reservation = () => {
               21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES <br />
               France
             </address>
-            <p className="contact-label">Lunch Time</p>
+            <p className="contact-label">L'heure du déjeuner</p>
             <p className="body-4">
               Du lundi au dimanche <br />
               12:00 pm to 14:30
             </p>
-            <p className="contact-label">Dinner Time</p>
+            <p className="contact-label">Heure du dîner</p>
             <p className="body-4">
               Du lundi au dimanche <br />
               19:00-23:00
