@@ -114,7 +114,7 @@ const Reservation = () => {
               backgroundImage: 'url("/assets/images/form-pattern.png")'
             }}
           >
-            <h2 className="headline-1 text-center">Contact Us</h2>
+            <h2 className="headline-1 text-center">Contactez-nous</h2>
             <p className="contact-label">Demande de réservation</p>
             <a
               href="tel:0146662579"
