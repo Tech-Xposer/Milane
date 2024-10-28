@@ -92,7 +92,7 @@ const Hero = ({ toggleMenu }) => {
               className="btn btn-primary slider-reveal"
               onClick={toggleMenu}
             >
-              <span className="text text-1">View Our Menu</span>
+              <span className="text text-1">Consultez notre menu</span>
               <span className="text text-2" aria-hidden="true">
                 Consultez notre menu
               </span>
