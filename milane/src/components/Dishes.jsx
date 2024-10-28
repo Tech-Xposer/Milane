@@ -23,18 +23,18 @@ const Dishes = ({toggleMenu}) => {
         alt="badge"
         className="abs-img"
       />
-      <p className="section-subtitle label-2">Special Dish</p>
-      <h2 className="headline-1 section-title">Mashli Masala</h2>
+      <p className="section-subtitle label-2">Plat spécial</p>
+      <h2 className="headline-1 section-title">Poulet grillé</h2>
       <p className="section-text">
-        Découvrez notre plat phare&rsquo; Poisson Grillé aux Herbes&rsquo; une merveilleuse
-        alliance de saveurs maritimes et d'aromates méditerranéens. Chaque filet
-        de poisson est soigneusement sélectionné&rsquo; puis grillé à la perfection et
-        assaisonné d'un mélange d'herbes fraîches et d'huile d'olive extra
-        vierge&rsquo; offrant un équilibre subtil entre tendreté et croquant.
+        Découvrez notre plat phare&nbsp;: &lsquo;Poulet Grillé aux Herbes&rsquo; – une délicieuse
+        alliance d'arômes et de saveurs méditerranéennes. Chaque morceau de
+        poulet est soigneusement mariné dans un mélange d'herbes fraîches et
+        grillé à la perfection avec de l'huile d'olive extra vierge, offrant
+        une tendreté exquise et un goût inoubliable.
       </p>
       <div className="wrapper">
-        <del className="del body-3">€11.50</del>
-        <span className="span body-1">€11.50</span>
+        <del className="del body-3">€6.00</del>
+        <span className="span body-1">€6.00</span>
       </div>
       <button onClick={toggleMenu} className="btn btn-primary">
         <span className="text text-1">View All Menu</span>
