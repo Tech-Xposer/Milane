@@ -47,7 +47,7 @@ const Services = ({ toggleMenu }) => {
                   onClick={toggleMenu}
                   className="btn-text hover-underline label-2"
                 >
-                  View Menu
+                  Voir le menu
                 </button>
               </div>
             </div>
@@ -80,7 +80,7 @@ const Services = ({ toggleMenu }) => {
                   onClick={toggleMenu}
                   className="btn-text hover-underline label-2"
                 >
-                  View Menu
+                  Voir le menu
                 </button>
               </div>
             </div>
@@ -113,7 +113,7 @@ const Services = ({ toggleMenu }) => {
                   onClick={toggleMenu}
                   className="btn-text hover-underline label-2"
                 >
-                  View Menu
+                  Voir le menu
                 </button>
               </div>
             </div>
