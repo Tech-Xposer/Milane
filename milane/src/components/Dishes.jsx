@@ -37,9 +37,9 @@ const Dishes = ({toggleMenu}) => {
         <span className="span body-1">€6.00</span>
       </div>
       <button onClick={toggleMenu} className="btn btn-primary">
-        <span className="text text-1">View All Menu</span>
+        <span className="text text-1">Voir tous les menus</span>
         <span className="text text-2" aria-hidden="true">
-          View All Menu
+          Voir tous les menus
         </span>
       </button>
     </div>

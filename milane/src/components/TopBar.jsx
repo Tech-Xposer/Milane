@@ -20,12 +20,12 @@ const TopBar = () => {
           <div className="flex gap-5">
             {" "}
             <span className="span">
-              <b className="text-[#]">Lunch Time:</b> Monday to Sunday
+              <b className="text-[#]">Lunch Time:</b> Du lundi au dimanche
               12:00 pm to 14:30{" "}
             </span>
             <span>
               {" "}
-              <b>Dinner Time</b>: Monday to Sunday 19:00-23:00
+              <b>Dinner Time</b>: Du lundi au dimanche 19:00-23:00
             </span>
           </div>
         </div>

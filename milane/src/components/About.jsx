@@ -10,7 +10,7 @@ const About = () => {
       <div className="container">
         <div className="about-content">
           <p className="label-2 section-subtitle" id="about-label">
-            Our Story
+            Notre histoire
           </p>
           <h2 className="headline-1 section-title">
             Chaque saveur raconte une histoire
@@ -33,7 +33,7 @@ const About = () => {
           <a href="#about" className="btn btn-primary">
             <span className="text text-1">Read More</span>
             <span className="text text-2" aria-hidden="true">
-              Read More
+              En savoir plus
             </span>
           </a>
         </div>

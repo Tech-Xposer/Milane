@@ -10,13 +10,13 @@ const Reservation = () => {
             method="POST"
             className="form-left"
           >
-            <h2 className="headline-1 text-center">Online Reservation</h2>
+            <h2 className="headline-1 text-center">Réservation en ligne</h2>
             <p className="form-text text-center">
-              Booking request{" "}
+              Demande de réservation{" "}
               <a href="tel:0146662579" className="link">
                 0146 662 579
               </a>
-              or fill out the order form
+              ou remplissez le formulaire de commande
             </p>
             <div className="input-wrapper">
               <input
@@ -115,7 +115,7 @@ const Reservation = () => {
             }}
           >
             <h2 className="headline-1 text-center">Contact Us</h2>
-            <p className="contact-label">Booking Request</p>
+            <p className="contact-label">Demande de réservation</p>
             <a
               href="tel:0146662579"
               className="body-1 contact-number hover-underline"
@@ -130,12 +130,12 @@ const Reservation = () => {
             </address>
             <p className="contact-label">Lunch Time</p>
             <p className="body-4">
-              Monday to Sunday <br />
+              Du lundi au dimanche <br />
               12:00 pm to 14:30
             </p>
             <p className="contact-label">Dinner Time</p>
             <p className="body-4">
-              Monday to Sunday <br />
+              Du lundi au dimanche <br />
               19:00-23:00
             </p>
           </div>

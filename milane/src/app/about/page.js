@@ -24,7 +24,7 @@ const AboutUs = () => {
           </p>
         </div>
         <div className="p-6">
-          <h2 className="text-6xl font-bold mb-4 text-[#F4BE39] font-londrina tracking-wider">Our Story</h2>
+          <h2 className="text-6xl font-bold mb-4 text-[#F4BE39] font-londrina tracking-wider">Notre histoire</h2>
           <p className="text-white font-quicksand">
             Founded by food enthusiasts with a love for gourmet dining, Milane started as a small dream that grew into a beloved restaurant. Over the years, we’ve become known for our creative dishes, our commitment to quality, and our passion for excellent service.
           </p>

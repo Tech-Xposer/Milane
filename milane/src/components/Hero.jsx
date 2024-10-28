@@ -94,7 +94,7 @@ const Hero = ({ toggleMenu }) => {
             >
               <span className="text text-1">View Our Menu</span>
               <span className="text text-2" aria-hidden="true">
-                View Our Menu
+                Consultez notre menu
               </span>
             </div>
           </li>

@@ -5,9 +5,9 @@ const StaticMenu = ({ toggleMenu }) => {
     <section className="section menu" aria-label="menu-label" id="menu">
       <div className="container">
         <p className="section-subtitle text-center label-2">
-          Special Selection
+          Sélection spéciale
         </p>
-        <h2 className="headline-1 section-title text-center">Delicious Menu</h2>
+        <h2 className="headline-1 section-title text-center">Menu délicieux</h2>
 
         <ul className="grid-list">
           <li>
@@ -231,9 +231,9 @@ const StaticMenu = ({ toggleMenu }) => {
           <span className="span">23:00</span>
         </p>
         <button href="" className="btn btn-primary" onClick={toggleMenu}>
-          <span className="text text-1">View All Menu</span>
+          <span className="text text-1">Voir tous les menus</span>
           <span className="text text-2" aria-hidden="true">
-            View All Menu
+            Voir tous les menus
           </span>
         </button>
 
