@@ -3,13 +3,13 @@ const menu = [
   {
     category: "ENTRÉES",
     description:
-      "Delicious starters to kick off your meal, featuring a variety of fresh and flavorful options.",
+      "De délicieux hors-d'œuvre pour commencer votre repas, avec une variété d'options fraîches et savoureuses.",
   },
 
   {
     category: "SALADS",
     description:
-      "Delicious starters to kick off your meal, featuring a variety of fresh and flavorful options.",
+      "Des salades fraîches et savoureuses pour accompagner votre repas.",
     items: [
       {
         name: "SALADE AU POULET",
