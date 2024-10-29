@@ -70,7 +70,7 @@ const Menu = ({ toggleMenu }) => {
           {menu &&
             menu.map((categoryItem, index) => (
               <div key={index} className="flex flex-col space-y-8">
-                <span className="test2xl md:text-4xl text-[#F4BE39] font-londrina block mb-2 cursor-pointer">
+                <span className="test2xl md:text-4xl text-[#ff6026] font-londrina block mb-2 cursor-pointer">
                   {categoryItem.category}
                 </span>
                 <p className="font-quicksand text-xl text-white mb-4">
