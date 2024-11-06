@@ -21,8 +21,8 @@ const Reservation = () => {
             <div className="input-wrapper">
               <input
                 type="text"
-                name="name"
-                placeholder="Your Name"
+                name="Name"
+                placeholder="Name"
                 autoComplete="off"
                 className="input-field"
                 required
@@ -30,7 +30,7 @@ const Reservation = () => {
               <input
                 type="email"
                 name="email"
-                placeholder="Your Email"
+                placeholder="Email"
                 autoComplete="off"
                 className="input-field"
                 required

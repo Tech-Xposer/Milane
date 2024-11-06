@@ -63,7 +63,7 @@ const Footer = () => {
                 <input
                   type="email"
                   name="email_address"
-                  placeholder="Your email"
+                  placeholder="Email"
                   autoComplete="off"
                   className="input-field"
                 />

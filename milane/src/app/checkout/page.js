@@ -209,7 +209,7 @@ const Checkout = () => {
                 onChange={handleChange}
                 className="w-full p-2 border border-[#F4BE39] rounded bg-transparent text-white"
                 required
-                placeholder="Your Name"
+                placeholder="Name"
               />
             </div>
 
@@ -241,7 +241,7 @@ const Checkout = () => {
                 onChange={handleChange}
                 className="w-full p-2 border border-[#F4BE39] rounded bg-transparent text-white"
                 required
-                placeholder="Your Email"
+                placeholder="Email"
               />
             </div>
 

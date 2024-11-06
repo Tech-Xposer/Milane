@@ -323,7 +323,7 @@ Subscribe us & Get 25% Off.
 
 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
 
-placeholder = Your email
+placeholder = Email
 
 Subscribe
 
