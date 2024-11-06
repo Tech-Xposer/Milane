@@ -120,7 +120,7 @@ const Reservation = () => {
               href="tel:0146662579"
               className="body-1 contact-number hover-underline"
             >
-              - 0146 662 579
+              - 01 46 66 25 79
             </a>
             <div className="separator" />
             <p className="contact-label">Location</p>
