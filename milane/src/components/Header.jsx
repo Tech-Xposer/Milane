@@ -164,10 +164,10 @@ const Header = ({ toggleMenu }) => {
               <b>Heure du dîner</b> Du lundi au dimanche 19:00-23:00
             </span>
             <a
-              href="mailto:khullarakshay723@gmail.com"
+              href="mailto:restaurantmilane@gmail.com"
               className="body-4 sidebar-link"
             >
-              Khullarakshay723@gmail.com
+              restaurantmilane@gmail.com
             </a>
             <div className="separator" />
             <p className="contact-label">Demande de réservation</p>
