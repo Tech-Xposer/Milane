@@ -28,7 +28,7 @@ const About = () => {
             href="tel:0146662579"
             className="body-1 contact-number hover-underline"
           >
-            0146 662 579{" "}
+            01 46 66 25 79{" "}
           </a>
           <a href="#about" className="btn btn-primary">
             <span className="text text-1">En savoir plus</span>
