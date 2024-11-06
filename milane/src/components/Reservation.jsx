@@ -14,7 +14,7 @@ const Reservation = () => {
             <p className="form-text text-center">
               Demande de réservation{" "}
               <a href="tel:0146662579" className="link">
-                " 01 46 66 25 79 "
+                 01 46 66 25 79 
               </a>
               {" "}ou remplissez le formulaire de commande
             </p>
@@ -120,7 +120,7 @@ const Reservation = () => {
               href="tel:0146662579"
               className="body-1 contact-number hover-underline"
             >
-              - " 01 46 66 25 79 "
+              -  01 46 66 25 79 
             </a>
             <div className="separator" />
             <p className="contact-label">Location</p>
