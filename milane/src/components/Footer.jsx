@@ -25,10 +25,10 @@ const Footer = () => {
             </address>
 
             <a
-              href="mailto:Khullarakshay723@gmial.com"
+              href="mailto:restaurantmilane@gmail.com"
               className="body-4 contact-link"
             >
-              danziastorage@gmail.com
+              restaurantmilane@gmail.com
             </a>
 
             <a href="tel:0146662579" className="body-4 contact-link">
