@@ -127,7 +127,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <a href="#" className="label-2 footer-link hover-underline">
+              <a href="https://www.instagram.com/milaneindien/profilecard/?igsh=eW9mcWR4YjVvZGh0" className="label-2 footer-link hover-underline">
                 Instagram
               </a>
             </li>
