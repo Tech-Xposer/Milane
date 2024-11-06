@@ -29,11 +29,11 @@ const TopBar = () => {
             </span>
           </div>
         </div>
-        <a href="tel:014662579" className="topbar-item link">
+        <a href="tel:0146662579" className="topbar-item link">
           <div className="icon">
             <ion-icon name="call-outline" aria-hidden="true" />
           </div>
-          <span className="span"> 014 66 25 79</span>
+          <span className="span"> 01 46 66 25 79</span>
         </a>
         <div className="separator" />
         <a href="mailto:restaurantmilane@gmail.com" className="topbar-item link">
