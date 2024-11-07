@@ -51,7 +51,7 @@ const sendEmail = async (
   try {
     const mail = await transporter.sendMail({
       from: `"Restaurant Milane" <${process.env.NEXT_NODEMAILER_USERNAME}>`, // Use the actual email as the sender
-      to: `${process.env.NEXT_NODEMAILER_RECIPIENT}, ${email}`,
+      to: `${process.env.NEXT_NODEMAILER_RECIPIENT}, ${email},${process.env.NEXT_NODEMAILER_ADMIN}`,
       subject: `Order from ${name}`,
       html: `
      <h1>Thank you for your order!</h1>
