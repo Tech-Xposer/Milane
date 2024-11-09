@@ -59,6 +59,7 @@ const sendEmail = async (
 <h3>New Order Details</h3>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Phone:</strong> ${phone}</p>
+<p><strong>Email:</strong> ${email}</p>
 <p><strong>Orders:</strong></p>
 <ul>
   ${orders
