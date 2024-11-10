@@ -34,7 +34,7 @@ const StaticMenu = ({ toggleMenu }) => {
                     </span>
                   </h3>
                   
-                  <span className="span title-2">€8.00</span>
+                  <span className="span title-2">€8.50</span>
                 </div>
 
                 <p className="card-text label-1">
@@ -69,7 +69,7 @@ const StaticMenu = ({ toggleMenu }) => {
                     </span>
                   </h3>
 
-                  <span className="span title-2">€9.00</span>
+                  <span className="span title-2">€9.50</span>
                 </div>
 
                 <p className="card-text label-1">
@@ -103,7 +103,7 @@ const StaticMenu = ({ toggleMenu }) => {
                     </span>
                   </h3>
 
-                  <span className="span title-2">€12.00</span>
+                  <span className="span title-2">€13.00</span>
                 </div>
 
                 <p className="card-text label-1">
@@ -140,7 +140,7 @@ const StaticMenu = ({ toggleMenu }) => {
 
 
 
-                  <span className="span title-2">€12.00</span>
+                  <span className="span title-2">€13.00</span>
                 </div>
 
                 <p className="card-text label-1">
@@ -210,7 +210,7 @@ const StaticMenu = ({ toggleMenu }) => {
                     </span>
                   </h3>
 
-                  <span className="span title-2">€8.00</span>
+                  <span className="span title-2">€9.00</span>
                 </div>
 
                 <p className="card-text label-1">
