@@ -18,7 +18,7 @@ const Features = () => {
                   alt="icon"
                 />
               </div>
-              <h3 className="title-2 card-title">hygiénique</h3>
+              <h3 className="title-2 card-title">Hygiénique</h3>
               <p className="label-1 card-text">
                 Des plats frais et préparés dans un environnement hygiénique...
               </p>
