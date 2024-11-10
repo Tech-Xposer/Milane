@@ -51,7 +51,7 @@ const menu = [
   {
     category: "SOUPES",
     description:
-      "A selection of heartwarming soups, perfect for a light yet satisfying start to your meal.",
+      "Une sélection de soupes réconfortantes, parfaites pour un début de repas léger mais satisfaisant.",
     items: [
       {
         name: "RASAM SOUPE",
@@ -68,7 +68,7 @@ const menu = [
   {
     category: "PLATS AGNEAU",
     description:
-      "Exquisite lamb dishes cooked to perfection with traditional spices and rich flavors.",
+      "Plats d'agneau exquis cuits à la perfection avec des épices traditionnelles et des saveurs riches.",
     items: [
       {
         name: "GHOST MASALA",
