@@ -123,7 +123,7 @@ const Reservation = () => {
               -  01 46 66 25 79 
             </a>
             <div className="separator" />
-            <p className="contact-label">Location</p>
+            <p className="contact-label">Address</p>
             <address className="body-4">
               21 Boulevard Jean-Jaurès 94260 FRESNES <br />
               France

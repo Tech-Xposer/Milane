@@ -26,7 +26,7 @@ const Hero = ({ toggleMenu }) => {
     {
       subtitle: "Incroyable et délicieux",
       title: "Un voyage savoureux avec\nle nourriture traditionnel",
-      text: "Nous prenons soin de nos clients comme de notre propre famille, avec chaque bouchée de Dosa croustillant et savoureux.",
+      text: "Découvrez la richesse de la cuisine traditionnelle, où chaque plat raconte une histoire de saveurs et de savoir-faire.",
       imgSrc: "/assets/images/hero-slider-13.jpg"
     },
 

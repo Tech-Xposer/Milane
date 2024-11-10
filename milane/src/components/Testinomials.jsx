@@ -11,7 +11,7 @@ const Testinomials = () => {
         <div className="quote">”</div>
         <p className="headline-2 testi-text">
           Je tenais à te remercier de m'avoir invité à ce dîner incroyable
-          l'autre soir. La nourriture était extraordinaire.
+          l'autre soir. La nourriture était exceptionnelle.
         </p>
         <div className="wrapper">
           <div className="separator" />
