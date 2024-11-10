@@ -45,11 +45,6 @@ const Footer = () => {
               <div className="separator"></div>
             </div>
 
-            <p className="title-1">Get News & Offers</p>
-
-            <p className="label-1">
-              Subscribe us & Get <span className="span">25% Off.</span>
-            </p>
 
             <form action="" className="input-wrapper">
               <div className="icon-wrapper">
