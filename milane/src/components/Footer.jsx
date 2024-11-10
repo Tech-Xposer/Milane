@@ -72,7 +72,7 @@ const Footer = () => {
           <ul className="footer-list">
             <li>
               <a href="/" className="label-2 footer-link hover-underline">
-                Home
+             Accueil
               </a>
             </li>
 
@@ -87,7 +87,7 @@ const Footer = () => {
                 href="/gallery"
                 className="label-2 footer-link hover-underline"
               >
-                Gallery
+                Galerie
               </Link>
             </li>
 
