@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
 
             <a href="tel:0146662579" className="body-4 contact-link">
-              Demande de réservation : 0146 662 579
+              Demande de réservation : 01 46 66 25 79
             </a>
 
             <span className="flex flex-col">
