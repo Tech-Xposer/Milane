@@ -18,7 +18,7 @@ const Features = () => {
                   alt="icon"
                 />
               </div>
-              <h3 className="title-2 card-title">Nourriture hygiénique</h3>
+              <h3 className="title-2 card-title">hygiénique</h3>
               <p className="label-1 card-text">
                 Des plats frais et préparés dans un environnement hygiénique...
               </p>
@@ -35,10 +35,9 @@ const Features = () => {
                   alt="icon"
                 />
               </div>
-              <h3 className="title-2 card-title">Environnement frais</h3>
+              <h3 className="title-2 card-title">Environnement</h3>
               <p className="label-1 card-text">
-                Un environnement frais et accueillant pour votre expérience
-                culinaire.
+                Un environnement accueillant
               </p>
             </div>
           </li>
