@@ -63,7 +63,7 @@ const Menu = ({ toggleMenu }) => {
             className="h-fit text-[#F4BE39] font-quicksand border-2 border-[#F4BE39] px-2 py-1 border-solid rounded-md hover:bg-[#F4BE39] hover:text-black transition duration-200"
             onClick={toggleMenu}
           >
-            Close
+           Fermer
           </button>
         </div>
         <div className="flex flex-col space-y-8 overflow-auto p-5">
