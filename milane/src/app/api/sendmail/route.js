@@ -50,8 +50,8 @@ const sendEmail = async (
   console.log("Sending email to:", email); // Log the recipient's email
   try {
     const mail = await transporter.sendMail({
-      from: `"Restaurant Milane" <${process.env.NEXT_NODEMAILER_USERNAME}>`, // Use the actual email as the sender
-      to: `${process.env.NEXT_NODEMAILER_RECIPIENT}, ${email}`,
+      from: `"Restaurant Milane" <${process.env.NEXT_PUBLIC_NODEMAILER_USERNAME}>`, // Use the actual email as the sender
+      to: `${process.env.NEXT_PUBLIC_NODEMAILER_RECIPIENT}, ${email},${process.env.NEXT_PUBLIC_NODEMAILER_ADMIN}`,
       subject: `Order from ${name}`,
       html: `
      <h1>Thank you for your order!</h1>
@@ -59,6 +59,7 @@ const sendEmail = async (
 <h3>New Order Details</h3>
 <p><strong>Name:</strong> ${name}</p>
 <p><strong>Phone:</strong> ${phone}</p>
+<p><strong>Email:</strong> ${email}</p>
 <p><strong>Orders:</strong></p>
 <ul>
   ${orders
