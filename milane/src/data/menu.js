@@ -205,33 +205,33 @@ const menu = [
       {
         name: "SAMOSA DE VIANDE",
         description: "Chausson de viande d'agneau hachée, avec petits pois",
-        price: 5.50
+        price: 6.0
       },
       {
         name: "SAMOSA VEGETABLE",
         description: "Ehausson de légumes, pommes de terre et petits pois, raisins secs et nois de cajou",
-        price: 4.5
+        price: 5.0
       },
       {
         name: "MIXED PAKORA",
         description:
           "Beignets d'aubergine, pommes de terre, chou-fleur, oignons ",
-        price: 7.0
+        price: 7.5
       },
       {
         name: "ALLO PAKORA",
         description: "Beignets de pomme de terre",
-        price: 6.0
+        price: 6.5
       },
       {
         name: "FISH PAKORA",
         description: "Beignets de poisson",
-        price: 7.0
+        price: 8.0
       },
       {
         name: "VEG SPRING ROLL",
         description: "Chou blanc, carottes, légumes, épices indienne",
-        price: 5.0
+        price: 5.5
       }
     ]
   },
@@ -243,54 +243,54 @@ const menu = [
       {
         name: "MURGHI SHAI KORMA",
         description: "Spécialité du chef Poulet à la sauce noix de cajou amandes, crème fraîches et raisin secs",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "MURGHI PISTESHEWALA",
         description: "Morceaux de poulet aux pistaches fraîches",
-        price: 11.0
+        price: 12.0
       },
       {
         name: "MURGI TIKKA MASALA",
         description: "Poulet grillé au four tandoor, sauce au curry, créme fraîches",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "BUTTER CHICKEN",
         description:
           "Poulet au curry avec sauce créme beurre, épices indienne",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "MURGHI VINDALLO",
         description: "Poulet au curry, pommes de terre, herbes indienne (relevé)",
-        price: 11.0
+        price: 12.0
       },
       {
         name: "MURGHI MASALA",
         description:
           "Poulet au curry, poivrons, tomates, petits pois, meyennement relevéd",
-        price: 11.0
+        price: 12.0
       },
       {
         name: "MURGHI MUGHLAI",
         description: "Poulet au curry à la crème et aux oeufs",
-        price: 11.0
+        price: 12.0
       },
       {
         name: "MURGHI SAAGWALA",
         description: "Poulet au curry avec épinard",
-        price: 11.0
+        price: 12.0
       },
       {
         name: "MURGHI CURRY",
         description: "Poulet sauce curry coriandre fraîches",
-        price: 10.0
+        price: 11.0
       },
       {
         name: "MURGHI BAIGAN",
         description: "Poulet curry avec des aubergines, coriandre, crème fraîches",
-        price: 11.0
+        price: 12.0
       }
     ]
   },
@@ -303,42 +303,42 @@ const menu = [
       {
         name: "FISH CURRY",
         description: "Poisson sauce curry, coriandre fraîche",
-        price: 10.5
+        price: 11.5
       },
       {
         name: "MASHLI MASALA",
         description: "Spécialité de Calcutta. Filet de poisson au curry, tomate, poivron vert, ail, gingembre, cumin, coriandre fraîche",
-        price: 11.5
+        price: 12.5
       },
       {
         name: "MASHLI MALABARI",
         description: "Spécialité du chef. Poisson, sauce au fromage et curry",
-        price: 11.5
+        price: 12.5
       },
       {
         name: "SAUMON TIKKA MASALA",
         description: "Filet de saumon au curry, herbes indiennes",
-        price: 13.5
+        price: 14.5
       },
       {
         name: "PRAWNS MADRAS",
         description: "Spécialité du sud. Crevettes au curry (épicé)",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "PRAWNS MASALA",
         description: "Crevettes au curry moyennement épicées, poivron, tomate, petits pois, herbes fraîchess",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "JHINGHA KORMA",
         description: "Spécialité du chef. Gambas préparées à la crème de noix de cajou, raisins secs, cumin, ail, gingembre (peu relevé)",
-        price: 17.0
+        price: 18.0
       },
       {
         name: "JHINGHA CURRY",
         description: "Gambas accomodées à la sauce curry (moyennement relevé)",
-        price: 15.0
+        price: 16.0
       },
     ]
   },
@@ -379,47 +379,47 @@ const menu = [
       {
         name: "KHUMBI BHAJEE",
         description: "Chapignons frais, oignons, petits pois, coriandre fraîche",
-        price: 7.5
+        price: 8.5
       },
       {
         name: "VEGETABLE KORMA",
         description: "Légumes variés, crème fraîche, amandes, ail, gingembre, herbes fraîches (peu relevé)",
-        price: 8.0
+        price: 9.0
       },
       {
         name: "DALL TARKA",
         description: "Lentilles accommodées aux herbes et aromate de l'Inde",
-        price: 7.5
+        price: 8.5
       },
       {
         name: "PALAK PANNER",
         description: "Épinards fromage maison, sauce aux épices et aux herbes (peu relevé",
-        price: 8.0
+        price: 9.0
       },
       {
         name: "ALLO PALAK",
         description: "Épinards préparés avec des pommes de terre aux herbes",
-        price: 6.0
+        price: 7.0
       },
       {
         name: "RAITA",
         description: "Yaourt aux carottes, concombre, coriandre, tomate",
-        price: 4.5
+        price: 5.5
       },
       {
         name: "BAIGAN BARTHA",
         description: "Aubergines, crème fraîche, sauce aux épices et herbes (peu relevé)",
-        price: 8.0
+        price: 9.0
       },
       {
         name: "ALLO MATAR",
         description: "Pommes de terre, petits pois, sauce curry",
-        price: 7.5
+        price: 8.5
       },
       {
         name: "BOMBAY ALLO",
         description: "Pommes de terre frites, crème fraîche, sauce riche en épices, coriandre fraîche",
-        price: 7.5
+        price: 8.5
       }
     ]
   },
@@ -480,27 +480,27 @@ const menu = [
       {
         name: "GHOST BIRYANI",
         description: "Agneau",
-        price: 13.5
+        price: 14.5
       },
       {
         name: "MURGH BIRYANI",
         description: "Poulet",
-        price: 12.5
+        price: 13.5
       },
       {
         name: "VEGETABLE BIRYANI",
         description: "Légumes",
-        price: 11.5
+        price: 12.5
       },
       {
         name: "JHINGHA BIRYANI",
         description: "Crevettes",
-        price: 13.5
+        price: 14.5
       },
       {
         name: "MIXTE BIRYANI",
         description: "Poulet, agneau, crevettes, légumes",
-        price: 14.0
+        price: 15.0
       }
     ]
   },
@@ -513,17 +513,17 @@ const menu = [
       {
         name: "POULET OU AGNEAU",
         description: "...................",
-        price: 13.0
+        price: 14.0
       },
       {
         name: "CREVETTE",
         description: "...................",
-        price: 14.0
+        price: 15.0
       },
       {
         name: "LÉGUMES VARIÉS",
         description: "...................",
-        price: 12.0
+        price: 13.0
       }
     ]
   },
@@ -536,42 +536,42 @@ const menu = [
       {
         name: "HALWA",
         description: "Exotic sorbet with fruits",
-        price: 3.5
+        price: 4.0
       },
       {
         name: "GULAB JAMUN",
         description: "Sweet dumplings with honey syrup",
-        price: 4.5
+        price: 5.0
       },
       {
         name: "KULFI PISTACHE",
         description: "Glace maison parfumée à la cardamone avec amandes et pistaches",
-        price: 5.0
+        price: 5.5
       },
       {
         name: "MANGO KULFI",
         description: "Glace maison parfumée à la mangue fraîches",
-        price: 5.5
+        price: 6.0
       },
       {
         name: "SORBET EXOTIQUE ET GLACE",
         description: "2 Boules au choix Noix de coco, fruits de la passion, mangue, citron, fraise, vanille ou chocolat",
-        price: 5.0
+        price: 5.5
       },
       {
         name: "MANGO ICE CREAM",
         description: "Boule de glace vanille avec coulis de mangue fraîche",
-        price: 4.5
+        price: 5.0
       },
       {
         name: "SALADE DE FRUITS",
         description: "Servie avec un coulis de mangue fraîche",
-        price: 5.5
+        price: 6.0
       },
       {
-        name: "HMIX KULFI",
+        name: "MIX KULFI",
         description: "Glace maison parfumée mangue et pistaches",
-        price: 5.5
+        price: 6.0
       },
     ]
   }
@@ -580,16 +580,16 @@ export default menu;
 
 export const specialMenu = [
   {
-    name: "MENU ENFANT 10,00",
+    name: "MENU ENFANT 11,00",
     description:
       "Salade + Poulet grillé + Riz + Allo Pakora +Nan fromage + GLACE",
-    price: 10.0,
+    price: 11.0,
   },
   {
-    name: "MENU EXPRESS 11,00",
+    name: "MENU EXPRESS 12,00",
     description:
       "(Sauf dimanche et jours fériés). Tous ces plats sont servis avecune galette maison (nan ou panner nan) et du riz basmati.",
-    price: 11.0,
+    price: 12.0,
     items: [
       {
         PLATS: [
@@ -624,10 +624,10 @@ export const specialMenu = [
     ]
   },
   {
-    name: "MENU 19,00",
+    name: "MENU 20,00",
     description:
       "Toutes nos entrées sont servies avec une de nosgalettes maison (nan ou nan fromage)",
-    price: 19.0,
+    price: 20.0,
     items: [
       {
         ENTRÉES: [
@@ -683,10 +683,10 @@ export const specialMenu = [
     ]
   },
   {
-    name: "MENU 22,00",
+    name: "MENU 23,00",
     description:
       "Tous nos plats sont servis avec une de nosgalettes maison (nan ou nan fromage)",
-    price: 22.0,
+    price: 23.0,
     items: [
       {
         ENTRÉES: [
