@@ -33,7 +33,7 @@ const StaticMenu = ({ toggleMenu }) => {
                       Murghi tikka
                     </span>
                   </h3>
-                  <span className="badge label-1">Seasonal</span>
+                  
                   <span className="span title-2">€8.00</span>
                 </div>
 
@@ -73,8 +73,8 @@ const StaticMenu = ({ toggleMenu }) => {
                 </div>
 
                 <p className="card-text label-1">
-                  Brochettes fr&apos;agneau macérées dans du yourt, jus de
-                  citron, all, gingembre
+                  Brochettes d&apos;agneau macérées dans du yourt, jus de
+                  citron, ail, gingembre
                 </p>
               </div>
             </div>
@@ -99,7 +99,7 @@ const StaticMenu = ({ toggleMenu }) => {
                 <div className="title-wrapper">
                   <h3 className="title-3">
                     <span className="card-title" onClick={toggleMenu}>
-                      Poulet au beurre
+                      Butter Chicken
                     </span>
                   </h3>
 
@@ -138,7 +138,7 @@ const StaticMenu = ({ toggleMenu }) => {
                     </span>
                   </h3>
 
-                  <span className="badge label-1">New</span>
+
 
                   <span className="span title-2">€12.00</span>
                 </div>
@@ -223,17 +223,12 @@ const StaticMenu = ({ toggleMenu }) => {
         </ul>
 
         <p className="menu-text text-center">
-          L'heure du déjeuner <span className="span">12:00 pm</span> to{" "}
-          <span className="span">14:30</span>
-        </p>
-        <p className="menu-text text-center">
-          Heure du dîner <span className="span">19:00</span> to{" "}
-          <span className="span">23:00</span>
+  Horsies <span className="span">12:00</span> à <span className="span">14:30</span> de <span className="span">19:00</span> à <span className="span">23:00</span>
         </p>
         <button href="" className="btn btn-primary" onClick={toggleMenu}>
-          <span className="text text-1">Voir tous les menus</span>
+          <span className="text text-1">Voir tous les menu</span>
           <span className="text text-2" aria-hidden="true">
-            Voir tous les menus
+            Voir tous les menu
           </span>
         </button>
 

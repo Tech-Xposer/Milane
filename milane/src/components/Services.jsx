@@ -73,7 +73,7 @@ const Services = ({ toggleMenu }) => {
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <span>Le poisson</span>
+                  <span>entrées</span>
                 </h3>
 
                 <button
@@ -106,7 +106,7 @@ const Services = ({ toggleMenu }) => {
 
               <div className="card-content">
                 <h3 className="title-4 card-title">
-                  <span>Poulet au beurre</span>
+                  <span>Butter Chicken</span>
                 </h3>
 
                 <button

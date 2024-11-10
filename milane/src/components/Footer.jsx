@@ -36,12 +36,7 @@ const Footer = () => {
             </a>
 
             <span className="flex flex-col">
-              <b className="text-[#]">L'heure du déjeuner</b> Du lundi au dimanche 12:00 pm
-              to 14:30{" "}
-            </span>
-            <span className="flex flex-col">
-              {" "}
-              <b>Heure du dîner</b> Du lundi au dimanche 19:00-23:00
+              <b className="text-[#]">Horsies 12:00 `a 14:30</b> de 19:00 `a 23:00{" "}
             </span>
 
             <div className="wrapper">
@@ -88,7 +83,7 @@ const Footer = () => {
 
             <li>
               <button href="#" className="label-2 footer-link hover-underline">
-                Menus
+                menu
               </button>
             </li>
 

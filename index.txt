@@ -28,7 +28,7 @@ aria-label = close menu
 <ion-icon name="close-outline" aria-hidden="true"></ion-icon>
 
 Home
-Menus
+menu
 About Us
 Our Chefs
 Contact
@@ -152,7 +152,7 @@ Delicious Menu
 alt = Greek Salad
 Greek Salad
 
-Seasonal
+Spécialité
 $25.50
 Tomatoes, green bell pepper, sliced cucumber onion, olives, and feta cheese.
 
@@ -328,7 +328,7 @@ placeholder = Email
 Subscribe
 
 Home
-Menus
+menu
 About Us
 Our Chefs
 Contact
@@ -426,7 +426,7 @@ Who We Are
 
 A modern restaurant with a menu that will make your mouth water. Servicing delicious food 
 since 45 years.
-Enjoy our seasonal menu and experience the beauty of naturalness
+Enjoy our Spécialité menu and experience the beauty of naturalness
 Lorem Ipsum is simply dummy text of the printingand typesetting industry lorem Ipsum has been the industrys standard dummy text ever since the when an unknown printer took a galley of type and scrambled it to make a type specimen book It has survived.
 
 Andrew Joe - Founder

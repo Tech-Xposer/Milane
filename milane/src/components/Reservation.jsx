@@ -128,16 +128,10 @@ const Reservation = () => {
               21 Boulevard Jean-Jaurès 94260 FRESNES <br />
               France
             </address>
-            <p className="contact-label">L'heure du déjeuner</p>
-            <p className="body-4">
-              Du lundi au dimanche <br />
-              12:00 pm to 14:30
-            </p>
-            <p className="contact-label">Heure du dîner</p>
-            <p className="body-4">
-              Du lundi au dimanche <br />
-              19:00-23:00
-            </p>
+            <p className="menu-text text-center">
+  Horsies <span className="span">12:00</span> à <span className="span">14:30</span>, de <span className="span">19:00</span> à <span className="span">23:00</span>, Heure du dîner: du lundi au dimanche 19:00-23:00
+</p>
+
           </div>
         </div>
       </div>

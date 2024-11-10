@@ -20,13 +20,9 @@ const TopBar = () => {
           <div className="flex gap-5">
             {" "}
             <span className="span">
-              <b className="text-[#]">L'heure du déjeuner:</b> Du lundi au dimanche
-              12:00 pm to 14:30{" "}
+              <b className="text-[#]">Horsies 12:00 `a 14:30</b> de 19:00 `a 23:00{" "}
             </span>
-            <span>
-              {" "}
-              <b>Heure du dîner</b>: Du lundi au dimanche 19:00-23:00
-            </span>
+            
           </div>
         </div>
         <a href="tel:0146662579" className="topbar-item link">
