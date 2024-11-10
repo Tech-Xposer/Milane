@@ -156,7 +156,7 @@ const Header = ({ toggleMenu }) => {
               France
             </address>{" "}
             <span className="flex flex-col">
-              <b className="text-[#]">Horsies 12:00 `a 14:30</b> de 19:00 `a 23:00{" "}
+              <b className="text-[#]">Horaires 12:00 à 14:30</b> de 19:00 à 23:00{" "}
             </span>
             <a
               href="mailto:restaurantmilane@gmail.com"
