@@ -281,7 +281,7 @@ const SpecialDishCard = ({ menuItem }) => {
             {Object.entries(itemGroup).map(([category, items]) => (
               <div key={category} className="mb-4">
                 <span className="text-lg md:text-2xl text-[#F4BE39] font-quicksand">
-                  Choisissez-en un parmi {category}
+                  Choisissez un {category}
                 </span>
                 <div className="flex flex-col items-start my-3  p-4 ">
                   {items.map((item, itemIndex) => (
