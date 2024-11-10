@@ -223,7 +223,7 @@ const StaticMenu = ({ toggleMenu }) => {
         </ul>
 
         <p className="menu-text text-center">
-  Horsies <span className="span">12:00</span> à <span className="span">14:30</span> de <span className="span">19:00</span> à <span className="span">23:00</span>
+        Horaires <span className="span">12:00</span> à <span className="span">14:30</span> de <span className="span">19:00</span> à <span className="span">23:00</span>
         </p>
         <button href="" className="btn btn-primary" onClick={toggleMenu}>
           <span className="text text-1">Voir les menu</span>
