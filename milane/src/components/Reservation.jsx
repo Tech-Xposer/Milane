@@ -129,7 +129,7 @@ const Reservation = () => {
               France
             </address>
             <p className="menu-text text-center">
-  Horsies <span className="span">12:00</span> à <span className="span">14:30</span>, de <span className="span">19:00</span> à <span className="span">23:00</span>, Heure du dîner: du lundi au dimanche 19:00-23:00
+            Horaires <span className="span">12:00</span> à <span className="span">14:30</span> de <span className="span">19:00</span> à <span className="span">23:00</span>
 </p>
 
           </div>
