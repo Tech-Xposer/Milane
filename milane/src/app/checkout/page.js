@@ -285,7 +285,7 @@ const Checkout = () => {
               className="w-full bg-[#F4BE39] text-black p-2 rounded mt-4 hover:bg-yellow-600 transition duration-200"
               disabled={loading}
             >
-              {loading ? "Placing..." : "Place Order"}
+              {loading ? "Placing..." : "Passer commande"}
             </button>
           </form>
           <div className="mt-4 text-lg">
@@ -300,7 +300,7 @@ const Checkout = () => {
             }}
             className="w-full bg-[#F4BE39] text-black p-2 rounded mt-4 hover:bg-yellow-600 transition duration-200"
           >
-            Clear Orders
+            Ordre clairs
           </button>
         </div>
       ) : (
