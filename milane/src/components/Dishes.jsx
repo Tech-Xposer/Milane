@@ -26,7 +26,7 @@ const Dishes = ({toggleMenu}) => {
       <p className="section-subtitle label-2">Plat spécial</p>
       <h2 className="headline-1 section-title">Poulet grillé</h2>
       <p className="section-text">
-        Découvrez notre plat phare&nbsp;: &lsquo;Poulet Grillé aux Herbes&rsquo; – une délicieuse
+        Découvrez notre plat phare&nbsp;: &lsquo;Poulet Grillé aux Herbes – une délicieuse
         alliance d'arômes et de saveurs méditerranéennes. Chaque morceau de
         poulet est soigneusement mariné dans un mélange d'herbes fraîches et
         grillé à la perfection avec de l'huile d'olive extra vierge, offrant

@@ -14,7 +14,7 @@ const Services = ({ toggleMenu }) => {
         </h2>
 
         <p className="section-text">
-          Bienvenue dans notre restaurant&rsquo; où la passion pour la cuisine
+          Bienvenue dans notre restaurant où la passion pour la cuisine
           rencontre un service exceptionnel. Nous nous engageons à offrir une
           expérience culinaire inoubliable à chaque visite.
         </p>

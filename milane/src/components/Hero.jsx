@@ -19,8 +19,8 @@ const Hero = ({ toggleMenu }) => {
     },
     {
       subtitle: "Traditionnel et hygiène",
-      title: "Pour l'amour du\nTandoori Chicken",
-      text: "Venez en famille et savourez le goût fumé et épicé de notre Tandoori Chicken, une vraie délice.",
+      title: "Pour l'amour du\nChicken Tandoori",
+      text: "Venez en famille et savourez le goût fumé et épicé de notre Chicken Tandoori, une vrai délice.",
       imgSrc: "/assets/images/hero-slider-12.jpg"
     },
     {

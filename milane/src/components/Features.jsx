@@ -55,7 +55,7 @@ const Features = () => {
               </div>
               <h3 className="title-2 card-title">Chefs qualifiés</h3>
               <p className="label-1 card-text">
-                Des chefs qualifiés&rsquo; passionnés par la création de plats exquis.
+                Des chefs qualifiés passionnés par la création de plats exquis.
               </p>
             </div>
           </li>

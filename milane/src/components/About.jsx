@@ -16,11 +16,11 @@ const About = () => {
             Chaque saveur raconte une histoire
           </h2>
           <p className="section-text">
-            Né d'une passion pour la gastronomie&rsquo; notre restaurant a pour
+            Né d'une passion pour la gastronomie notre restaurant a pour
             mission de célébrer les saveurs authentiques et les traditions
             culinaires. Chaque plat est préparé avec des ingrédients locaux et
-            de saison&rsquo; garantissant fraîcheur et qualité. Nous créons une
-            ambiance chaleureuse et accueillante&rsquo; invitant chacun à
+            de saison garantissant fraîcheur et qualité. Nous créons une
+            ambiance chaleureuse et accueillante invitant chacun à
             savourer des moments inoubliables autour d'une bonne table.
           </p>
           <div className="contact-label">Réservation par téléphone</div>

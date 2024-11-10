@@ -9,7 +9,7 @@ const TopBar = () => {
             <ion-icon name="location-outline" aria-hidden="true" />
           </div>
           <span className="span">
-            21&rsquo; Boulevard Jean-Jaurès&rsquo; 94260 FRESNES
+            21 Boulevard Jean-Jaurès 94260 FRESNES
           </span>
         </address>
         <div className="separator" />
