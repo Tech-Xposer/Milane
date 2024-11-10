@@ -226,9 +226,9 @@ const StaticMenu = ({ toggleMenu }) => {
   Horsies <span className="span">12:00</span> à <span className="span">14:30</span> de <span className="span">19:00</span> à <span className="span">23:00</span>
         </p>
         <button href="" className="btn btn-primary" onClick={toggleMenu}>
-          <span className="text text-1">Voir tous les menu</span>
+          <span className="text text-1">Voir les menu</span>
           <span className="text text-2" aria-hidden="true">
-            Voir tous les menu
+            Voir les menu
           </span>
         </button>
 
