@@ -15,36 +15,36 @@ const menu = [
         name: "SALADE AU POULET",
         description:
           "Salade verte, poulet,concombre, tomate, coriandre fraîches",
-        price: 6.5
+        price: 7.0
       },
       {
         name: "RAITA",
         description:
           "Yaourt nature avec concombre, tomate, carotte râpéé coriandre fraîches",
-        price: 4.5
+        price: 5.0
       },
       {
         name: "ALLO RAITA",
         description: "Yaourt nature avec pomme deterre",
-        price: 4.5
+        price: 5.0
       },
       {
         name: "SALADE INDIENNE",
         description:
           "Salade verte, concombre, tomate,poivrons, carottes, mais",
-        price: 6.5
+        price: 7.0
       },
       {
         name: "SALADE POISSON",
         description:
           "Salade verte, poissan,concombre, tomate, coriandre",
-        price: 6.5
+        price: 7.0
       },
       {
         name: "PRAWNS CHAT",
         description:
           "Crevettes macérées dans du jus de citron vert et salade composée tomate,concombre, pommes et herbes fraîches",
-        price: 8.0
+        price: 8.5
       }
     ]
   },
@@ -56,12 +56,12 @@ const menu = [
       {
         name: "RASAM SOUPE",
         description: "Soupe de lentilles, carottes, céleri",
-        price: 6.0
+        price: 6.5
       },
       {
         name: "CHICKEN SOUPE",
         description: "Soupe de poulet parfumée au gingembre",
-        price: 7.0
+        price: 7.5
       }
     ]
   },
@@ -73,46 +73,46 @@ const menu = [
       {
         name: "GHOST MASALA",
         description: "Agneau au curry, poivrons, tomates, petits pois (moyennement relevé)",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST TIKKA MASALA",
         description: "Agneau grillé au four tandoor, sauce au curry",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST SHAI KORMA",
         description:
           "Spécialité du chef. Agneau sauce de noix de cajou, amandes, crème fraîches et raisins secs",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST SAAGWALA",
         description: "Agneau au curry avec des épinards (moyennement relevé)",
-        price: 11.5
+        price: 12.5
       },
       {
         name: "GHOST RADA KHUMBE",
         description:
           "Agneau au curry, feuillus de fenouil, coriandre, ail, gingembre et champignons frais",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST VINDALOO",
         description: "Agneau au curry, pommes de terre, herbes fralches, épices indiennes",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST MILANE",
         description:
           "Morceau choisis d'agneau, épice, sauce tomate et amandes (releve)",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST BAIGAN",
         description:
           "Agneau sauce curry avec des aubergines, coriandre, crème fraîche",
-        price: 12.0
+        price: 13.0
       },
       {
         name: "GHOST CURRY",
@@ -129,44 +129,44 @@ const menu = [
       {
         name: "MUTTON TIKKA",
         description: "Brochettes d'agneau macérées dans du yaourt, jus de citron, ail, gingembre",
-        price: 9.0
+        price: 9.5
       },
       {
         name: "RASHMI KABAB",
         description: "Blanc de poulet haché préparé à la coriandre, senvis avec une herbe indienne présenté sous forme de saucisses grillées",
-        price: 6.5
+        price: 7.0
       },
       {
         name: "SHEAK KABAB",
         description:
           "Palets de viande d'agneau hachés épais avec gingembre. herbes fraîches",
-        price: 7.0
+        price: 7.5
       },
       {
         name: "MURGHI TIKKA",
         description:
           "Morceaux de poulet aux herbes fraîchess, grillés au tandoor",
-        price: 8.0
+        price: 8.5
       },
       {
         name: "SAUMON TIKKA",
         description: "Saumon mariné, sauce à la crème, jus de citron vert",
-        price: 11.5
+        price: 12.0
       },
       {
         name: "CHICKEN TANDOORI",
         description: "Poulet grillé aromatisé d'herbes fraîchess",
-        price: 6.0
+        price: 6.5
       },
       {
         name: "GAMBAS TANDOORI",
         description: "Gambas grillées aux herbes fraîches (6 pcs)",
-        price: 14.0
+        price: 14.5
       },
       {
         name: "BARA KEBAB",
         description: "Jarret d'agneau grillé au tandoor, épices, herbes fraîches",
-        price: 7.5
+        price: 8.0
       },
       {
         name: "BATERA TANDOORI",
@@ -190,17 +190,17 @@ const menu = [
   {
     category: "PAKORA (BEIGNETS)",
     description:
-      "Crispy, deep-fried fritters that make for a perfect snack or appetizer.",
+      "Des beignets croustillants et frits qui constituent une collation ou un apéritif parfait.",
     items: [
       {
         name: "ONION BHAJI",
         description: "Beignets d'oignons",
-        price: 4.0
+        price: 4.5
       },
       {
         name: "CREVETTES PAKORA",
         description: "Marceaux de crevettes gratinées (beignets de crevettes)",
-        price: 8.5
+        price: 9.0
       },
       {
         name: "SAMOSA DE VIANDE",
