@@ -156,22 +156,22 @@ const menu = [
       {
         name: "CHICKEN TANDOORI",
         description: "Poulet grillé aromatisé d'herbes fraîchess",
-        price: 6.50
+        price: 8.00
       },
       {
         name: "GAMBAS TANDOORI",
         description: "Gambas grillées aux herbes fraîches (6 pcs)",
-        price: 14.50
+        price: 16.00
       },
       {
         name: "BARA KEBAB",
         description: "Jarret d'agneau grillé au tandoor, épices, herbes fraîches",
-        price: 8.00
+        price: 9.00
       },
       {
         name: "BATERA TANDOORI",
         description: "Cailles entières grillé, sauce au yaourt et épices indiennes",
-        price: 9.00
+        price: 10.50
       },
       {
         name: "MIXTE GRILL (1 pers)",
@@ -399,7 +399,7 @@ const menu = [
       {
         name: "ALLO PALAK",
         description: "Épinards préparés avec des pommes de terre aux herbes",
-        price: 7.00
+        price: 9.00
       },
       {
         name: "RAITA",
