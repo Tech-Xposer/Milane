@@ -65,62 +65,7 @@ const menu = [
       }
     ]
   },
-  {
-    category: "PLATS AGNEAU",
-    description:
-      "Plats d'agneau exquis cuits à la perfection avec des épices traditionnelles et des saveurs riches.",
-    items: [
-      {
-        name: "GHOST MASALA",
-        description: "Agneau au curry, poivrons, tomates, petits pois (moyennement relevé)",
-        price: 13.00
-      },
-      {
-        name: "GHOST TIKKA MASALA",
-        description: "Agneau grillé au four tandoor, sauce au curry",
-        price: 13.00
-      },
-      {
-        name: "GHOST SHAI KORMA",
-        description:
-          "Spécialité du chef. Agneau sauce de noix de cajou, amandes, crème fraîches et raisins secs",
-        price: 13.00
-      },
-      {
-        name: "GHOST SAAGWALA",
-        description: "Agneau au curry avec des épinards (moyennement relevé)",
-        price: 12.50
-      },
-      {
-        name: "GHOST RADA KHUMBE",
-        description:
-          "Agneau au curry, feuillus de fenouil, coriandre, ail, gingembre et champignons frais",
-        price: 13.00
-      },
-      {
-        name: "GHOST VINDALOO",
-        description: "Agneau au curry, pommes de terre, herbes fralches, épices indiennes",
-        price: 13.00
-      },
-      {
-        name: "GHOST MILANE",
-        description:
-          "Morceau choisis d'agneau, épice, sauce tomate et amandes (releve)",
-        price: 13.00
-      },
-      {
-        name: "GHOST BAIGAN",
-        description:
-          "Agneau sauce curry avec des aubergines, coriandre, crème fraîche",
-        price: 13.00
-      },
-      {
-        name: "GHOST CURRY",
-        description: "Agneau sauce curry, coriandre fraîche",
-        price: 12.00
-      }
-    ]
-  },
+
   {
     category: "KEBABE BAHAR-GRILL",
     description:
@@ -187,6 +132,7 @@ const menu = [
       }
     ]
   },
+  
   {
     category: "PAKORA (BEIGNETS)",
     description:
@@ -290,6 +236,63 @@ const menu = [
       {
         name: "MURGHI BAIGAN",
         description: "Poulet curry avec des aubergines, coriandre, crème fraîches",
+        price: 12.00
+      }
+    ]
+  },
+
+  {
+    category: "PLATS AGNEAU",
+    description:
+      "Plats d'agneau exquis cuits à la perfection avec des épices traditionnelles et des saveurs riches.",
+    items: [
+      {
+        name: "GHOST MASALA",
+        description: "Agneau au curry, poivrons, tomates, petits pois (moyennement relevé)",
+        price: 13.00
+      },
+      {
+        name: "GHOST TIKKA MASALA",
+        description: "Agneau grillé au four tandoor, sauce au curry",
+        price: 13.00
+      },
+      {
+        name: "GHOST SHAI KORMA",
+        description:
+          "Spécialité du chef. Agneau sauce de noix de cajou, amandes, crème fraîches et raisins secs",
+        price: 13.00
+      },
+      {
+        name: "GHOST SAAGWALA",
+        description: "Agneau au curry avec des épinards (moyennement relevé)",
+        price: 12.50
+      },
+      {
+        name: "GHOST RADA KHUMBE",
+        description:
+          "Agneau au curry, feuillus de fenouil, coriandre, ail, gingembre et champignons frais",
+        price: 13.00
+      },
+      {
+        name: "GHOST VINDALOO",
+        description: "Agneau au curry, pommes de terre, herbes fralches, épices indiennes",
+        price: 13.00
+      },
+      {
+        name: "GHOST MILANE",
+        description:
+          "Morceau choisis d'agneau, épice, sauce tomate et amandes (releve)",
+        price: 13.00
+      },
+      {
+        name: "GHOST BAIGAN",
+        description:
+          "Agneau sauce curry avec des aubergines, coriandre, crème fraîche",
+        price: 13.00
+      },
+      {
+        name: "GHOST CURRY",
+        description: "Agneau sauce curry, coriandre fraîche",
         price: 12.00
       }
     ]
