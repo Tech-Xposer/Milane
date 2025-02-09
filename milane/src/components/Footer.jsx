@@ -76,9 +76,12 @@ const Footer = () => {
               </a>
             </li>
 
-            <button href="" className="label-2 footer-link hover-underline" onClick={toggleMenu}>
-          <span className="text text-1">menu</span>
-        </button>
+            <li>
+              <button href="/menu" className="label-2 footer-link hover-underline">
+                menu
+              </button>
+            </li>
+
 
 
             <li>
