@@ -139,7 +139,7 @@ const Footer = () => {
           <p className="copyright">
             &copy; 2024 Milane. Tous droits réservés | Conçu par
             <a
-              href="https://www.instagram.com/danzia_2021/"
+              href="https://www.danzia.fr/"
               target="_blank"
               className="link"
             >
