@@ -33,8 +33,8 @@ const Dishes = ({toggleMenu}) => {
         une tendreté exquise et un goût inoubliable.
       </p>
       <div className="wrapper">
-        <del className="del body-3">€6.50</del>
-        <span className="span body-1">€6.50</span>
+        <del className="del body-3">€8.00</del>
+        <span className="span body-1">€8.00</span>
       </div>
       <button onClick={toggleMenu} className="btn btn-primary">
         <span className="text text-1">Voir le menu</span>

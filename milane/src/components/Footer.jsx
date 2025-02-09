@@ -77,7 +77,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <button href="#" className="label-2 footer-link hover-underline">
+              <button href="/menu" className="label-2 footer-link hover-underline">
                 menu
               </button>
             </li>
