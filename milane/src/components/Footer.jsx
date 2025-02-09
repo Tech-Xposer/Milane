@@ -36,7 +36,7 @@ const Footer = () => {
             </a>
 
             <span className="flex flex-col">
-              <b className="text-[#]">Horaires 12:00 à 14:30</b> de 19:00 à 23:00{" "}
+              <b className="text-[#]">Horaires 12:00 à 14:30</b> et 19:00 à 23:00{" "}
             </span>
 
             <div className="wrapper">
