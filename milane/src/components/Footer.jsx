@@ -77,7 +77,7 @@ const Footer = () => {
             </li>
 
             <li>
-              <button href="/menu" className="label-2 footer-link hover-underline"onClick={toggleMenu}>
+              <button href="/menu" className="btn btn-primary"onClick={toggleMenu}>
                 menu
               </button>
             </li>
