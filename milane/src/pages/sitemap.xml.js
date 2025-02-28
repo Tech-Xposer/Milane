@@ -1,4 +1,4 @@
-export async function GET() {
+export default function handler(req, res) {
     const baseUrl = "https://www.restaurantmilane.fr";
   
     const urls = [
@@ -25,10 +25,7 @@ export async function GET() {
       .join("")}
   </urlset>`;
   
-    return new Response(sitemap, {
-      headers: {
-        "Content-Type": "application/xml"
-      }
-    });
+    res.setHeader("Content-Type", "application/xml");
+    res.status(200).send(sitemap);
   }
   
